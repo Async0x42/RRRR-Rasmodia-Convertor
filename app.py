@@ -1,7 +1,7 @@
 # /path/to/your_script.py
 
 import re
-import json
+import json5 as json  # Use json5 for enhanced JSON handling, including comments
 
 # Gender mapping with basic forms
 # TODO: Magnus
@@ -23,6 +23,7 @@ def apply_case(word, example):
     return word
 
 def gender_swap(text):
+    """Replaces gender-specific words in the text with their counterparts using regex matching."""
     def replace(match):
         word = match.group(0)
         for male, female in gender_map.items():
@@ -33,27 +34,18 @@ def gender_swap(text):
     pattern = r'\b(?:' + '|'.join(gender_map.keys()) + r')\b'
     return re.sub(pattern, replace, text, flags=re.IGNORECASE)
 
-def clean_json(json_str):
-    """Remove single-line comments and unescape problematic control characters from JSON strings."""
-    # Remove single-line comments
-    no_comments = re.sub(r"//.*", "", json_str)
-    # Unescape control characters
-    return re.sub(r"[\n\r\t]+", "", no_comments)
-
 def load_json_file(filename):
-    """Read and clean the JSON file, then convert to Python dictionary."""
-    try:
-        with open(filename, 'r') as file:
-            clean_content = clean_json(file.read())
-        return json.loads(clean_content)
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Error parsing JSON: {str(e)}")
+    """Read and clean the JSON file, then convert to Python dictionary using json5."""
+    with open(filename, 'r') as file:
+        return json.loads(file.read())
 
 def write_json_file(filename, data):
+    """Write data to a JSON file using json5 for better format handling."""
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
         
 def swap_all_genders(json_data):
+    """Swap all gender-specific words found in the JSON data."""
     output_data = {}
     for key, value in json_data.items():
         swapped_text = gender_swap(value)
@@ -65,7 +57,7 @@ def swap_all_genders(json_data):
         write_json_file("data/output.json", output_data)
 
 try:
-    json_data = load_json_file("data/test.json")
+    json_data = load_json_file("data/default.json")
     swap_all_genders(json_data)
 except Exception as e:
     print(e)
