@@ -19,6 +19,10 @@ def find_differences(original, patched):
             diffs.append((key, f"{key}: {original_value}", f"{key}: {patched_value}"))
     return diffs
 
+def sort_by_specificity(diffs):
+    """Sort differences by key specificity (longer and more dots means more specific)."""
+    return sorted(diffs, key=lambda diff: (-len(diff[0]), -diff[0].count('.')))
+
 class ProgressDisplay:
     """Class to display progress of operations in a table format."""
     def __init__(self, total, console):
@@ -65,21 +69,22 @@ def edit_text(text):
 
 def setup_console(diffs):
     """Setup and manage the console UI."""
+    sorted_diffs = sort_by_specificity(diffs)  # Sort diffs by specificity
     console = Console()
-    progress = ProgressDisplay(len(diffs), console)
+    progress = ProgressDisplay(len(sorted_diffs), console)
 
     index = 0
     while True:
-        key, o_text, p_text = diffs[index]
+        key, o_text, p_text = sorted_diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text)
         choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit:[/bold blue] ").strip().lower()
 
         if choice == 'q':
             break
         elif choice == ',':
-            index = (index - 1) % len(diffs)
+            index = (index - 1) % len(sorted_diffs)
         elif choice == '.':
-            index = (index + 1) % len(diffs)
+            index = (index + 1) % len(sorted_diffs)
         elif choice == 'e':
             p_text = edit_text(p_text)  # User can edit the patched text
 
