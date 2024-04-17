@@ -35,7 +35,7 @@ class ProgressDisplay:
         self.table.add_column("Text", justify="left")
         self.table.rows = []  # Clear previous rows
         self.table.add_row(highlight_key(key), highlight_differences(o_text, p_text))
-        self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"{self.current}/{self.total}")
+        self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
         self.console.print(self.table)
 
 def highlight_key(original):
