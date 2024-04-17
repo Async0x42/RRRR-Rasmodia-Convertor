@@ -35,7 +35,7 @@ class ProgressDisplay:
         self.table.add_column("Text", justify="left")
         self.table.rows = []  # Clear previous rows
         self.table.add_row(highlight_key(key), highlight_differences(o_text, p_text))
-        self.table.add_row("Diff Progress:", f"{self.current}/{self.total}")
+        self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"{self.current}/{self.total}")
         self.console.print(self.table)
 
 def highlight_key(original):
@@ -53,16 +53,15 @@ def highlight_differences(original, patched):
     patched_key, patched_rest = patched.split(':', 1)
 
     highlighted_text = Text()
-    highlighted_text.append(original_key + ':', style="bold blue")
     original_words = original_rest.strip().split()
     patched_words = patched_rest.strip().split()
     
     for o_word, p_word in zip(original_words, patched_words):
         if o_word != p_word:
-            highlighted_text.append(' ').append(o_word, style="red strike")
-            highlighted_text.append(' ' + p_word, style="green")
+            highlighted_text.append(o_word, style="red strike").append(' ')
+            highlighted_text.append(p_word + ' ', style="green")
         else:
-            highlighted_text.append(' ' + o_word, style="default")
+            highlighted_text.append(o_word+ ' ', style="default")
     return highlighted_text
 
 def setup_console(diffs):
@@ -71,27 +70,30 @@ def setup_console(diffs):
     progress = ProgressDisplay(len(diffs), console)
 
     index = 0
-    while index < len(diffs):
+    while True:  # Using a continuous loop to allow indefinite navigation
         key, o_text, p_text = diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text)
         key = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit:[/bold blue] ").strip().lower()
+        
         if key == 'q':
-            break
-        elif key == ',' and index > 0: # left
-            index -= 1
-        elif key == ',' and index == 0: # left when at first index
-            index -= len(diffs)
-        elif key == '.' and index < len(diffs) - 1: # right
-            index += 1
-        elif key == '.' and index == len(diffs) - 1: # right when at last index
-            index = 0
+            break  # Exit the loop if 'q' is pressed
+        elif key == ',':
+            index = (index - 1) % len(diffs)  # Wrap around to the last index if at first
+        elif key == '.':
+            index = (index + 1) % len(diffs)  # Wrap around to the first index if at last
+
+
 
 def main():
     """Main function to load data and show differences."""
     original_data = load_json('data/default.json')
     patched_data = load_json('data/output.json')
     diffs = find_differences(original_data, patched_data)
-    setup_console(diffs)
+    if not diffs:
+        print("[bold red]No differences to display.[/bold red]")
+        return
+    else:
+        setup_console(diffs)
 
 if __name__ == "__main__":
     main()
