@@ -6,10 +6,10 @@ import json5 as json  # Use json5 for enhanced JSON handling, including comments
 # Gender mapping with basic forms
 # TODO: Magnus
 gender_map = {
-    r'\bhe\b': 'she', r'\bhis\b': 'her', r'\bhim\b': 'her', r'\bhimself\b': 'herself',
-    r'\bman\b': 'woman', r'\bboy\b': 'girl', r'\bbrother\b': 'sister',
+    r'\bmagnus\'\b': 'rasmodia\'s', r'\bhe\b': 'she', r'\bhis\b': 'her', r'\bhim\b': 'her', r'\bhimself\b': 'herself',
+    r'\bman\b': 'woman', r'\bboy\b': 'girl', r'\bbrother\b': 'sister', r'\bdaddy\b': 'mommy',
     r'\bfather\b': 'mother', r'\bson\b': 'daughter', r'\bhusband\b': 'wife', r'\bdad\b': 'mom',
-    r'\bmr.\b': 'mrs.', r'\bwizard\b': 'witch', r'\brasmodius\b': 'rasmodia'
+    r'\bmr.\b': 'mrs.', r'\bwizard\b': 'witch', r'\brasmodius\b': 'rasmodia', r'\bmagnus\b': 'rasmodia'
 }
 
 def apply_case(word, example):
