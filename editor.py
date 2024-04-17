@@ -3,6 +3,8 @@ import json5
 from rich.console import Console
 from rich.table import Table
 from rich.text import Text
+from prompt_toolkit import PromptSession
+from prompt_toolkit.shortcuts import prompt
 
 def load_json(filename):
     """Load JSON data from a file."""
@@ -20,11 +22,11 @@ def find_differences(original, patched):
     return diffs
 
 def sort_by_specificity(diffs):
-    """Sort differences by key specificity (longer and more dots means more specific)."""
+    """Sort differences by key specificity."""
     return sorted(diffs, key=lambda diff: (-len(diff[0]), -diff[0].count('.')))
 
 class ProgressDisplay:
-    """Class to display progress of operations in a table format."""
+    """Display progress of operations in a table format."""
     def __init__(self, total, console):
         self.total = total
         self.current = 0
@@ -44,11 +46,11 @@ class ProgressDisplay:
         self.console.print(self.table)
 
 def highlight_key(key):
-    """Apply syntax highlighting to a key."""
+    """Syntax highlighting for a key."""
     return Text(key + ':', style="bold blue")
 
 def highlight_differences(original, patched):
-    """Highlight differences between original and patched texts."""
+    """Highlight differences between texts."""
     original_key, original_rest = original.split(':', 1)
     patched_key, patched_rest = patched.split(':', 1)
     highlighted_text = Text()
@@ -64,12 +66,15 @@ def highlight_differences(original, patched):
     return highlighted_text
 
 def edit_text(text, console):
-    """Allow the user to edit text, requires console for input."""
-    return console.input("[bold blue]Edit text below:\n[/bold blue]" + text + "\n[bold blue]Edited text:[/bold blue] ")
+    """Prepopulate and allow editing of text with cursor control."""
+    session = PromptSession()
+    def pre_run():
+        session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
+    return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
 
 def setup_console(diffs):
-    """Setup and manage the console UI."""
-    sorted_diffs = sort_by_specificity(diffs)  # Sort diffs by specificity
+    """Manage the console UI."""
+    sorted_diffs = sort_by_specificity(diffs)
     console = Console()
     progress = ProgressDisplay(len(sorted_diffs), console)
 
@@ -86,10 +91,10 @@ def setup_console(diffs):
         elif choice == '.':
             index = (index + 1) % len(sorted_diffs)
         elif choice == 'e':
-            p_text = edit_text(p_text, console)  # User can edit the patched text and pass console object
+            p_text = edit_text(p_text, console)
 
 def main():
-    """Main function to start the program."""
+    """Main function."""
     original_data = load_json('data/default.json')
     patched_data = load_json('data/output.json')
     diffs = find_differences(original_data, patched_data)
