@@ -1,16 +1,14 @@
-# /path/to/your_script.py
-
 import re
+import csv
 import json5 as json  # Use json5 for enhanced JSON handling, including comments
 
-# Gender mapping with basic forms
-# TODO: Magnus
-gender_map = {
-    r'\bmagnus\'\b': 'rasmodia\'s', r'\bhe\b': 'she', r'\bhis\b': 'her', r'\bhim\b': 'her', r'\bhimself\b': 'herself',
-    r'\bman\b': 'woman', r'\bboy\b': 'girl', r'\bbrother\b': 'sister', r'\bdaddy\b': 'mommy',
-    r'\bfather\b': 'mother', r'\bson\b': 'daughter', r'\bhusband\b': 'wife', r'\bdad\b': 'mom',
-    r'\bmr.\b': 'mrs.', r'\bwizard\b': 'witch', r'\brasmodius\b': 'rasmodia', r'\bmagnus\b': 'rasmodia'
-}
+def load_replacements(filename, delimiter='|'):
+    """Loads gender mappings from a txt file with a custom delimiter."""
+    with open(filename, newline='', encoding='utf-8') as file:
+        reader = csv.reader(file, delimiter=delimiter)
+        return {row[0]: row[1] for row in reader if row}
+
+replacement_map = load_replacements('replacements.txt', delimiter='|')
 
 def apply_case(word, example):
     """Applies the case of 'example' to 'word', assuming both are single words."""
@@ -22,16 +20,16 @@ def apply_case(word, example):
         return word.title()
     return word
 
-def gender_swap(text):
-    """Replaces gender-specific words in the text with their counterparts using regex matching."""
+def replacement_swap(text):
+    """Replaces specific words in the text with their counterparts using regex matching."""
     def replace(match):
         word = match.group(0)
-        for male, female in gender_map.items():
+        for male, female in replacement_map.items():
             if re.fullmatch(male, word, re.IGNORECASE):
                 return apply_case(female, word)
         return word  # No change if no match is found
 
-    pattern = r'\b(?:' + '|'.join(gender_map.keys()) + r')\b'
+    pattern = r'\b(?:' + '|'.join(replacement_map.keys()) + r')\b'
     return re.sub(pattern, replace, text, flags=re.IGNORECASE)
 
 def load_json_file(filename):
@@ -44,11 +42,11 @@ def write_json_file(filename, data):
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
         
-def swap_all_genders(json_data):
+def swap_all_replacements(json_data):
     """Swap all gender-specific words found in the JSON data."""
     output_data = {}
     for key, value in json_data.items():
-        swapped_text = gender_swap(value)
+        swapped_text = replacement_swap(value)
         if swapped_text != value:
             output_data[key] = swapped_text
             print(f"Difference found for '{key}': {swapped_text}")
@@ -58,6 +56,6 @@ def swap_all_genders(json_data):
 
 try:
     json_data = load_json_file("data/default.json")
-    swap_all_genders(json_data)
+    swap_all_replacements(json_data)
 except Exception as e:
     print(e)
