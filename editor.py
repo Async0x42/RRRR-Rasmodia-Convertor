@@ -103,7 +103,7 @@ def setup_console(diffs, original_data, corrections):
     while True:
         key, o_text, p_text, corrected = sorted_diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text, corrected)
-        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save and move next:[/bold blue] ").strip().lower()
+        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save and move next, or 'n <number>' to jump:[/bold blue] ").strip().lower()
 
         if choice == 'q':
             break
@@ -119,6 +119,15 @@ def setup_console(diffs, original_data, corrections):
             console.print("[bold green]Value saved! Moving to next diff...[/bold green]")
             sorted_diffs[index] = (key, o_text, p_text, True)  # Update corrected status immediately
             index = (index + 1) % len(sorted_diffs)  # Move to next difference
+        elif choice.startswith('n '):
+            try:
+                new_index = int(choice.split()[1]) - 1  # Convert to zero-indexed
+                if 0 <= new_index < len(sorted_diffs):
+                    index = new_index
+                else:
+                    console.print(f"[bold red]Invalid number. Please enter a number between 1 and {len(sorted_diffs)}.[/bold red]")
+            except ValueError:
+                console.print("[bold red]Please enter a valid number after 'n '.[/bold red]")
 
     save_json(corrections, 'data/output-corrections.json')
 
