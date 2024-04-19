@@ -4,6 +4,7 @@ from rich.table import Table
 from rich.text import Text
 from prompt_toolkit import PromptSession
 from prompt_toolkit.shortcuts import prompt
+import os
 
 def load_json(filename):
     """Load JSON data from a file."""
@@ -14,6 +15,12 @@ def save_json(data, filename):
     """Save JSON data to a file."""
     with open(filename, 'w') as file:
         json5.dump(data, file, indent=4)
+
+def apply_corrections(data, corrections):
+    """Apply corrections on top of the original data."""
+    corrected_data = data.copy()
+    corrected_data.update(corrections)
+    return corrected_data
 
 def find_differences(original, patched):
     """Compare two dictionaries and find differences."""
@@ -106,6 +113,13 @@ def main():
     """Main function."""
     original_data = load_json('data/default.json')
     patched_data = load_json('data/output.json')
+    
+    # Check if corrections file exists and apply corrections
+    corrections_file = 'data/output-corrections.json'
+    if os.path.exists(corrections_file):
+        corrections = load_json(corrections_file)
+        patched_data = apply_corrections(patched_data, corrections)
+
     diffs = find_differences(original_data, patched_data)
     if not diffs:
         print("[bold red]No differences to display.[/bold red]")
