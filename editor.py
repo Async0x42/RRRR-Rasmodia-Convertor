@@ -10,6 +10,11 @@ def load_json(filename):
     with open(filename, 'r') as file:
         return json5.load(file)
 
+def save_json(data, filename):
+    """Save JSON data to a file."""
+    with open(filename, 'w') as file:
+        json5.dump(data, file, indent=4)
+
 def find_differences(original, patched):
     """Compare two dictionaries and find differences."""
     diffs = []
@@ -69,17 +74,18 @@ def edit_text(text, console):
         session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
     return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
 
-def setup_console(diffs):
-    """Manage the console UI."""
+def setup_console(diffs, original_data):
+    """Manage the console UI and save changes."""
     sorted_diffs = sort_by_specificity(diffs)
     console = Console()
     progress = ProgressDisplay(len(sorted_diffs), console)
+    corrections = {}
 
     index = 0
     while True:
         key, o_text, p_text = sorted_diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text)
-        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit:[/bold blue] ").strip().lower()
+        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save:[/bold blue] ").strip().lower()
 
         if choice == 'q':
             break
@@ -90,6 +96,11 @@ def setup_console(diffs):
         elif choice == 'e':
             edited_text = edit_text(p_text, console)
             sorted_diffs[index] = (key, o_text, edited_text)
+        elif choice == '':
+            corrections[key] = p_text
+            console.print("[bold green]Value saved![/bold green]")
+
+    save_json(corrections, 'data/output-corrections.json')
 
 def main():
     """Main function."""
@@ -99,7 +110,7 @@ def main():
     if not diffs:
         print("[bold red]No differences to display.[/bold red]")
         return
-    setup_console(diffs)
+    setup_console(diffs, original_data)
 
 if __name__ == "__main__":
     main()
