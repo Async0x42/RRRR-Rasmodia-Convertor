@@ -108,6 +108,7 @@ def setup_console(diffs, original_data, corrections):
         elif choice == '':
             corrections[key] = p_text
             console.print("[bold green]Value saved! Moving to next diff...[/bold green]")
+            sorted_diffs[index] = (key, o_text, p_text, True)  # Update corrected status immediately
             index = (index + 1) % len(sorted_diffs)  # Move to next difference
 
     save_json(corrections, 'data/output-corrections.json')
