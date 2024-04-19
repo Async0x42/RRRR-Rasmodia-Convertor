@@ -3,7 +3,6 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 from prompt_toolkit import PromptSession
-from prompt_toolkit.shortcuts import prompt
 import os
 
 def load_json(filename):
@@ -32,10 +31,6 @@ def find_differences(original, patched, corrections=None):
             corrected = key in corrections if corrections else False
             diffs.append((key, original_value, patched_value, corrected))
     return diffs
-
-def sort_by_specificity(diffs):
-    """Sort differences by key specificity."""
-    return sorted(diffs, key=lambda diff: (-len(diff[0]), -diff[0].count('.')))
 
 class ProgressDisplay:
     """Display progress of operations in a table format."""
@@ -77,48 +72,47 @@ def highlight_differences(original, patched):
             highlighted_text.append(o_word + ' ', style="default")
     return highlighted_text
 
-def edit_text(text, console):
+def edit_text(text):
     """Prepopulate and allow editing of text with cursor control."""
     session = PromptSession()
     def pre_run():
         session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
     return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
 
-def find_first_unconfirmed(sorted_diffs):
+def find_first_unconfirmed(diffs):
     """Find the index of the first unconfirmed difference."""
-    for i, diff in enumerate(sorted_diffs):
+    for i, diff in enumerate(diffs):
         if not diff[3]:  # diff[3] is the 'corrected' status
             return i
     return 0  # If all are confirmed, start from the first
 
-def setup_console(diffs, original_data, corrections):
+def setup_console(diffs, corrections):
     """Manage the console UI and save changes."""
-    sorted_diffs = sort_by_specificity(diffs)
     console = Console()
-    progress = ProgressDisplay(len(sorted_diffs), console)
+    progress = ProgressDisplay(len(diffs), console)
 
     # Start from the first unconfirmed difference
-    index = find_first_unconfirmed(sorted_diffs)
+    index = find_first_unconfirmed(diffs)
 
     while True:
-        key, o_text, p_text, corrected = sorted_diffs[index]
+        key, o_text, p_text, corrected = diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text, corrected)
         choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save and move next:[/bold blue] ").strip().lower()
 
         if choice == 'q':
             break
         elif choice == ',':
-            index = (index - 1) % len(sorted_diffs)
+            index = (index - 1) % len(diffs)
         elif choice == '.':
-            index = (index + 1) % len(sorted_diffs)
+            index = (index + 1) % len(diffs)
         elif choice == 'e':
-            edited_text = edit_text(p_text, console)
-            sorted_diffs[index] = (key, o_text, edited_text, corrected)
+            edited_text = edit_text(p_text)
+            diffs[index] = (key, o_text, edited_text, corrected)
         elif choice == '':
             corrections[key] = p_text
             console.print("[bold green]Value saved! Moving to next diff...[/bold green]")
-            sorted_diffs[index] = (key, o_text, p_text, True)  # Update corrected status immediately
-            index = (index + 1) % len(sorted_diffs)  # Move to next difference
+            diffs[index] = (key, o_text, p_text, True)  # Update corrected status immediately
+            index = (index + 1) % len(diffs)  # Move to next difference
 
     save_json(corrections, 'data/output-corrections.json')
 
@@ -138,7 +132,7 @@ def main():
     if not diffs:
         print("[bold red]No differences to display.[/bold red]")
         return
-    setup_console(diffs, original_data, corrections)
+    setup_console(diffs, corrections)
 
 if __name__ == "__main__":
     main()
