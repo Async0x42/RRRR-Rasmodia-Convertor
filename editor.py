@@ -22,14 +22,15 @@ def apply_corrections(data, corrections):
     corrected_data.update(corrections)
     return corrected_data
 
-def find_differences(original, patched):
+def find_differences(original, patched, corrections=None):
     """Compare two dictionaries and find differences."""
     diffs = []
     for key in patched:
         if original.get(key, None) != patched[key]:
             original_value = original.get(key, '')
             patched_value = patched[key]
-            diffs.append((key, original_value, patched_value))
+            corrected = key in corrections if corrections else False
+            diffs.append((key, original_value, patched_value, corrected))
     return diffs
 
 def sort_by_specificity(diffs):
@@ -44,7 +45,7 @@ class ProgressDisplay:
         self.console = console
         self.table = Table()
 
-    def update_progress(self, current, key, o_text, p_text):
+    def update_progress(self, current, key, o_text, p_text, corrected):
         """Update the progress displayed on the console."""
         self.current = current
         self.console.clear()
@@ -54,6 +55,8 @@ class ProgressDisplay:
         self.table.rows = []
         self.table.add_row(highlight_key(key), highlight_differences(o_text, p_text))
         self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
+        if corrected:
+            self.table.add_row("[bold]Status:[/bold]", "[bold green]ACCEPTED/CORRECTED[/bold green]")
         self.console.print(self.table)
 
 def highlight_key(key):
@@ -81,17 +84,16 @@ def edit_text(text, console):
         session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
     return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
 
-def setup_console(diffs, original_data):
+def setup_console(diffs, original_data, corrections):
     """Manage the console UI and save changes."""
     sorted_diffs = sort_by_specificity(diffs)
     console = Console()
     progress = ProgressDisplay(len(sorted_diffs), console)
-    corrections = {}
 
     index = 0
     while True:
-        key, o_text, p_text = sorted_diffs[index]
-        progress.update_progress(index + 1, key, o_text, p_text)
+        key, o_text, p_text, corrected = sorted_diffs[index]
+        progress.update_progress(index + 1, key, o_text, p_text, corrected)
         choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save:[/bold blue] ").strip().lower()
 
         if choice == 'q':
@@ -102,10 +104,11 @@ def setup_console(diffs, original_data):
             index = (index + 1) % len(sorted_diffs)
         elif choice == 'e':
             edited_text = edit_text(p_text, console)
-            sorted_diffs[index] = (key, o_text, edited_text)
+            sorted_diffs[index] = (key, o_text, edited_text, corrected)
         elif choice == '':
             corrections[key] = p_text
             console.print("[bold green]Value saved![/bold green]")
+            sorted_diffs[index] = (key, o_text, p_text, True)  # Mark as corrected
 
     save_json(corrections, 'data/output-corrections.json')
 
@@ -116,15 +119,16 @@ def main():
     
     # Check if corrections file exists and apply corrections
     corrections_file = 'data/output-corrections.json'
+    corrections = {}
     if os.path.exists(corrections_file):
         corrections = load_json(corrections_file)
         patched_data = apply_corrections(patched_data, corrections)
 
-    diffs = find_differences(original_data, patched_data)
+    diffs = find_differences(original_data, patched_data, corrections)
     if not diffs:
         print("[bold red]No differences to display.[/bold red]")
         return
-    setup_console(diffs, original_data)
+    setup_console(diffs, original_data, corrections)
 
 if __name__ == "__main__":
     main()
