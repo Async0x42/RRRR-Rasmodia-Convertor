@@ -84,13 +84,22 @@ def edit_text(text, console):
         session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
     return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
 
+def find_first_unconfirmed(sorted_diffs):
+    """Find the index of the first unconfirmed difference."""
+    for i, diff in enumerate(sorted_diffs):
+        if not diff[3]:  # diff[3] is the 'corrected' status
+            return i
+    return 0  # If all are confirmed, start from the first
+
 def setup_console(diffs, original_data, corrections):
     """Manage the console UI and save changes."""
     sorted_diffs = sort_by_specificity(diffs)
     console = Console()
     progress = ProgressDisplay(len(sorted_diffs), console)
 
-    index = 0
+    # Start from the first unconfirmed difference
+    index = find_first_unconfirmed(sorted_diffs)
+
     while True:
         key, o_text, p_text, corrected = sorted_diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text, corrected)
