@@ -94,7 +94,7 @@ def setup_console(diffs, original_data, corrections):
     while True:
         key, o_text, p_text, corrected = sorted_diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text, corrected)
-        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save:[/bold blue] ").strip().lower()
+        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to quit, 'e' to edit, 'enter' to save and move next:[/bold blue] ").strip().lower()
 
         if choice == 'q':
             break
@@ -107,8 +107,8 @@ def setup_console(diffs, original_data, corrections):
             sorted_diffs[index] = (key, o_text, edited_text, corrected)
         elif choice == '':
             corrections[key] = p_text
-            console.print("[bold green]Value saved![/bold green]")
-            sorted_diffs[index] = (key, o_text, p_text, True)  # Mark as corrected
+            console.print("[bold green]Value saved! Moving to next diff...[/bold green]")
+            index = (index + 1) % len(sorted_diffs)  # Move to next difference
 
     save_json(corrections, 'data/output-corrections.json')
 
