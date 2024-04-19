@@ -1,4 +1,3 @@
-# path/filename: update_display_script.py
 import json5
 from rich.console import Console
 from rich.table import Table
@@ -18,7 +17,7 @@ def find_differences(original, patched):
         if original.get(key, None) != patched[key]:
             original_value = original.get(key, '')
             patched_value = patched[key]
-            diffs.append((key, f"{key}: {original_value}", f"{key}: {patched_value}"))
+            diffs.append((key, original_value, patched_value))
     return diffs
 
 def sort_by_specificity(diffs):
@@ -51,11 +50,9 @@ def highlight_key(key):
 
 def highlight_differences(original, patched):
     """Highlight differences between texts."""
-    original_key, original_rest = original.split(':', 1)
-    patched_key, patched_rest = patched.split(':', 1)
     highlighted_text = Text()
-    original_words = original_rest.strip().split()
-    patched_words = patched_rest.strip().split()
+    original_words = original.strip().split()
+    patched_words = patched.strip().split()
 
     for o_word, p_word in zip(original_words, patched_words):
         if o_word != p_word:
@@ -91,7 +88,8 @@ def setup_console(diffs):
         elif choice == '.':
             index = (index + 1) % len(sorted_diffs)
         elif choice == 'e':
-            p_text = edit_text(p_text, console)
+            edited_text = edit_text(p_text, console)
+            sorted_diffs[index] = (key, o_text, edited_text)
 
 def main():
     """Main function."""
