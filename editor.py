@@ -52,6 +52,8 @@ class ProgressDisplay:
         self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
         if corrected:
             self.table.add_row("[bold]Status:[/bold]", "[bold green]ACCEPTED/CORRECTED[/bold green]")
+        else:
+            self.table.add_row("[bold]Status:[/bold]", "[bold red]UNCONFIRMED[/bold red]")
         self.console.print(self.table)
 
 def highlight_key(key):
