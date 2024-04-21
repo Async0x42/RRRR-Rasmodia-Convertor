@@ -100,7 +100,9 @@ def setup_console(diffs, corrections):
     while True:
         key, o_text, p_text, corrected = diffs[index]
         progress.update_progress(index + 1, key, o_text, p_text, corrected)
-        choice = console.input("[bold blue]Navigate with '.', ',' or 'q' to save and quit, 'e' to edit, 'enter' to save and move next, 'd' to delete, or 'n <number>' to jump:[/bold blue] ").strip().lower()
+        console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold] or [bold]'n <number>'[/bold] to jump[/blue]")
+        console.print("[blue][bold]'d'[/bold] to delete, [bold]'e'[/bold] to edit, [bold]'enter'[/bold] to save and move next, or [bold]'q'[/bold] to save and quit[/blue]")
+        choice = console.input("Command: ").strip().lower()
 
         if choice == 'q':
             break
