@@ -9,8 +9,11 @@ import os
 
 def load_json(filename):
     """Load JSON data from a file."""
-    with open(filename, 'r') as file:
-        return json5.load(file)
+    try:
+        with open(filename, 'r') as file:
+            return json5.load(file)
+    except FileNotFoundError:
+        return {}  # Return empty dict if file not found
 
 def save_json(data, filename):
     """Save JSON data to a file securely."""
@@ -23,25 +26,34 @@ def hash_text(text):
     """Create a hash for the given text."""
     return hashlib.sha256(text.encode()).hexdigest()
 
+def save_corrections(corrections):
+        save_json(corrections, 'data/output-corrections.json')
+        save_json(corrections_hashes, 'data/output-corrections-hashes.json')
+
 def apply_corrections(data, corrections):
     """Apply corrections on top of the original data."""
     corrected_data = data.copy()
     corrected_data.update(corrections)
     return corrected_data
 
-def find_differences(original, patched, corrections=None):
+def find_differences(original, patched, corrections=None, corrections_hashes=None):
     """Compare two dictionaries and find differences."""
     diffs = []
-    hashes = {}
+    original_hashes = {}
     for key in patched:
         if original.get(key, None) != patched[key]:
             original_value = original.get(key, '')
             patched_value = patched[key]
             corrected = key in corrections if corrections else False
-            diffs.append((key, original_value, patched_value, corrected))
-            # Hash the original value so that we can compare to prior saved corrections and/or save the hash when making a correction
-            hashes[key] = hash_text(original_value)
-    return diffs, hashes
+            
+            # Check if the hash exists in the corrections_hashes to avoid KeyError
+            if corrections_hashes and key in corrections_hashes:
+                hash_match = hash_text(original_value) == corrections_hashes[key]
+            else:
+                hash_match = False  # Default to False if no hash is found
+            
+            diffs.append((key, original_value, patched_value, corrected, hash_match))
+    return diffs
 
 class ProgressDisplay:
     """Display progress of operations in a table format."""
@@ -51,7 +63,7 @@ class ProgressDisplay:
         self.console = console
         self.table = Table()
 
-    def update_progress(self, current, key, o_text, p_text, corrected):
+    def update_progress(self, current, key, o_text, p_text, corrected, hash_match):
         """Update the progress displayed on the console."""
         self.current = current
         self.console.clear()
@@ -61,10 +73,10 @@ class ProgressDisplay:
         self.table.rows = []
         self.table.add_row(highlight_key(key), highlight_differences(o_text, p_text))
         self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
-        if corrected:
-            self.table.add_row("[bold]Status:[/bold]", "[bold green]ACCEPTED/CORRECTED[/bold green]")
-        else:
-            self.table.add_row("[bold]Status:[/bold]", "[bold red]UNCONFIRMED[/bold red]")
+        status_text = "[bold green]ACCEPTED/CORRECTED[/bold green]" if corrected else "[bold red]UNCONFIRMED[/bold red]"
+        self.table.add_row("[bold]Status:[/bold]", status_text)
+        hash_status = "[bold green]HASH MATCH[/bold green]" if hash_match else "[bold red]HASH MISMATCH[/bold red]"
+        self.table.add_row("[bold]Hash Status:[/bold]", hash_status)
         self.console.print(self.table)
 
 def highlight_key(key):
@@ -99,7 +111,7 @@ def find_first_unconfirmed(diffs):
             return i
     return 0  # If all are confirmed, start from the first
 
-def setup_console(diffs, corrections, orig_hashes, correction_hashes):
+def setup_console(diffs, corrections):
     """Manage the console UI and save changes."""
     console = Console()
     progress = ProgressDisplay(len(diffs), console)
@@ -108,8 +120,8 @@ def setup_console(diffs, corrections, orig_hashes, correction_hashes):
     index = find_first_unconfirmed(diffs)
     try:
         while True:
-            key, o_text, p_text, corrected = diffs[index]
-            progress.update_progress(index + 1, key, o_text, p_text, corrected)
+            key, o_text, p_text, corrected, hash_match = diffs[index]
+            progress.update_progress(index + 1, key, o_text, p_text, corrected, hash_match)
             console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold] or [bold]'n <number>'[/bold] to jump[/blue]")
             console.print("[blue][bold]'d'[/bold] to delete, [bold]'e'[/bold] to edit, [bold]'enter'[/bold] to accept and move next, or [bold]'q'[/bold] to save and quit[/blue]")
             choice = console.input("Command: ").strip().lower()
@@ -125,7 +137,6 @@ def setup_console(diffs, corrections, orig_hashes, correction_hashes):
                 diffs[index] = (key, o_text, edited_text, corrected)
             elif choice == '':
                 corrections[key] = p_text
-                correction_hashes[key] = hash_text(orig_hashes[key])
                 console.print("[bold green]Value saved! Moving to next diff...[/bold green]")
                 diffs[index] = (key, o_text, p_text, True)
                 index = (index + 1) % len(diffs)
@@ -141,19 +152,16 @@ def setup_console(diffs, corrections, orig_hashes, correction_hashes):
             elif choice == 'd':
                 if corrected:
                     del corrections[key]  # Remove the correction
-                    del correction_hashes[key] # Remove the correction hash
                     diffs[index] = (key, o_text, p_text, False)  # Update the status in the UI
                     console.print("[bold red]Correction deleted. Status updated.[/bold red]")
                 else:
                     console.print("[bold red]No confirmed correction to delete.[/bold red]")
                     
-        save_json(corrections, 'data/output-corrections.json')
-        save_json(correction_hashes, 'data/output-corrections-hashes.json')
+        save_corrections(corrections);
     except KeyboardInterrupt:
         user_input = console.input("\nDo you want to [bold red]'save and quit'[/bold red] or [bold red]'quit without saving'[/bold red]? (Type 'save' to save): ").strip().lower()
         if user_input == 'save':
-            save_json(corrections, 'data/output-corrections.json')
-            save_json(correction_hashes, 'data/output-corrections-hashes.json')
+            save_corrections(corrections)
         console.print("[bold red]Exiting now![/bold red]")
 
 def main():
@@ -161,24 +169,19 @@ def main():
     original_data = load_json('data/default.json')
     patched_data = load_json('data/output.json')
     
-    # Check if corrections file exists and apply corrections
-    corrections_file = 'data/output-corrections.json'
-    corrections = {}
-    if os.path.exists(corrections_file):
-        corrections = load_json(corrections_file)
-        patched_data = apply_corrections(patched_data, corrections)
+    # Load corrections and apply them
+    corrections = load_json('data/output-corrections.json')
+    patched_data = apply_corrections(patched_data, corrections)
 
-    # Check if correction hashes file exists and apply corrections
-    correction_hashes_file = 'data/output-correction-hashes.json'
-    correction_hashes = {}
-    if os.path.exists(correction_hashes_file):
-        correction_hashes = load_json(correction_hashes_file)
+    # Load correction hashes
+    corrections_hashes = load_json('data/output-corrections-hashes.json')
         
-    diffs, diff_orig_hashes = find_differences(original_data, patched_data, corrections)
+    diffs = find_differences(original_data, patched_data, corrections, corrections_hashes)
+
     if not diffs:
         print("[bold red]No differences to display.[/bold red]")
         return
-    setup_console(diffs, corrections, diff_orig_hashes, correction_hashes)
+    setup_console(diffs, corrections)
 
 if __name__ == "__main__":
     main()
