@@ -1,3 +1,4 @@
+import json
 import json5
 from rich.console import Console
 from rich.table import Table
@@ -14,7 +15,7 @@ def load_json(filename):
 def save_json(data, filename):
     """Save JSON data to a file."""
     with open(filename, 'w') as file:
-        json5.dump(data, file, indent=4)
+        json.dump(data, file, indent=4)
 
 def apply_corrections(data, corrections):
     """Apply corrections on top of the original data."""

@@ -1,6 +1,7 @@
 import re
 import csv
-import json5 as json  # Use json5 for enhanced JSON handling, including comments
+import json
+import json5
 
 def load_replacements(filename, delimiter='|'):
     """Loads gender mappings from a txt file with a custom delimiter."""
@@ -35,7 +36,7 @@ def replacement_swap(text):
 def load_json_file(filename):
     """Read and clean the JSON file, then convert to Python dictionary using json5."""
     with open(filename, 'r') as file:
-        return json.loads(file.read())
+        return json5.loads(file.read())
 
 def write_json_file(filename, data):
     """Write data to a JSON file using json5 for better format handling."""
