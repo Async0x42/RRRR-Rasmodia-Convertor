@@ -11,7 +11,7 @@ father|mother
 son|daughter
 husband|wife
 dad|mom
-mr.|mrs.
+mr|mrs
 wizard|witch
 rasmodius|rasmodia
 magnus|rasmodia
