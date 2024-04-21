@@ -39,7 +39,7 @@ def load_json_file(filename):
         return json5.loads(file.read())
 
 def write_json_file(filename, data):
-    """Write data to a JSON file using json5 for better format handling."""
+    """Save JSON data to a file."""
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
         
