@@ -26,7 +26,7 @@ def hash_text(text):
     """Create a hash for the given text."""
     return hashlib.sha256(text.encode()).hexdigest()
 
-def save_corrections(corrections):
+def save_corrections(corrections, corrections_hashes):
         save_json(corrections, 'data/output-corrections.json')
         save_json(corrections_hashes, 'data/output-corrections-hashes.json')
 
@@ -111,7 +111,7 @@ def find_first_unconfirmed(diffs):
             return i
     return 0  # If all are confirmed, start from the first
 
-def setup_console(diffs, corrections):
+def setup_console(diffs, corrections, corrections_hashes):
     """Manage the console UI and save changes."""
     console = Console()
     progress = ProgressDisplay(len(diffs), console)
@@ -120,6 +120,12 @@ def setup_console(diffs, corrections):
     index = find_first_unconfirmed(diffs)
     try:
         while True:
+            # Ensure 'hash_match' is correctly evaluated
+            if len(diffs[index]) == 4:
+                key, o_text, p_text, corrected = diffs[index]
+                hash_match = hash_text(o_text) == corrections_hashes.get(key, '')
+                diffs[index] = (key, o_text, p_text, corrected, hash_match)
+            
             key, o_text, p_text, corrected, hash_match = diffs[index]
             progress.update_progress(index + 1, key, o_text, p_text, corrected, hash_match)
             console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold] or [bold]'n <number>'[/bold] to jump[/blue]")
@@ -134,34 +140,36 @@ def setup_console(diffs, corrections):
                 index = (index + 1) % len(diffs)
             elif choice == 'e':
                 edited_text = edit_text(p_text)
-                diffs[index] = (key, o_text, edited_text, corrected)
+                # Update diffs and preserve all fields including hash_match
+                diffs[index] = (key, o_text, edited_text, corrected, hash_match)
             elif choice == '':
                 corrections[key] = p_text
-                console.print("[bold green]Value saved! Moving to next diff...[/bold green]")
-                diffs[index] = (key, o_text, p_text, True)
+                # Recalculate and update hash in corrections_hashes to reflect the new original text
+                new_hash = hash_text(o_text)
+                corrections_hashes[key] = new_hash
+                console.print("[bold green]Value saved and hash updated! Moving to next diff...[/bold green]")
+                diffs[index] = (key, o_text, p_text, True, True)  # Set corrected to True and hash_match to True
                 index = (index + 1) % len(diffs)
             elif choice.startswith('n '):
-                try:
-                    new_index = int(choice.split()[1]) - 1
-                    if 0 <= new_index < len(diffs):
-                        index = new_index
-                    else:
-                        console.print(f"[bold red]Invalid number. Please enter a number between 1 and {len(diffs)}.[/bold red]")
-                except ValueError:
-                    console.print("[bold red]Please enter a valid number after 'n '.[/bold red]")
+                new_index = int(choice.split()[1]) - 1
+                if 0 <= new_index < len(diffs):
+                    index = new_index
+                else:
+                    console.print(f"[bold red]Invalid number. Please enter a number between 1 and {len(diffs)}.[/bold red]")
             elif choice == 'd':
                 if corrected:
-                    del corrections[key]  # Remove the correction
-                    diffs[index] = (key, o_text, p_text, False)  # Update the status in the UI
-                    console.print("[bold red]Correction deleted. Status updated.[/bold red]")
+                    del corrections[key]
+                    del corrections_hashes[key]  # Also delete the hash from hashes dictionary
+                    diffs[index] = (key, o_text, p_text, False, False)
+                    console.print("[bold red]Correction and hash deleted. Status updated.[/bold red]")
                 else:
                     console.print("[bold red]No confirmed correction to delete.[/bold red]")
-                    
-        save_corrections(corrections);
+
+        save_corrections(corrections, corrections_hashes)
     except KeyboardInterrupt:
         user_input = console.input("\nDo you want to [bold red]'save and quit'[/bold red] or [bold red]'quit without saving'[/bold red]? (Type 'save' to save): ").strip().lower()
         if user_input == 'save':
-            save_corrections(corrections)
+            save_corrections(corrections, corrections_hashes)
         console.print("[bold red]Exiting now![/bold red]")
 
 def main():
@@ -181,7 +189,7 @@ def main():
     if not diffs:
         print("[bold red]No differences to display.[/bold red]")
         return
-    setup_console(diffs, corrections)
+    setup_console(diffs, corrections, corrections_hashes)
 
 if __name__ == "__main__":
     main()
