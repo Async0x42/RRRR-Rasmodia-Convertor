@@ -27,31 +27,35 @@ def hash_text(text):
     return hashlib.sha256(text.encode()).hexdigest()
 
 def save_corrections(corrections, corrections_hashes):
-        save_json(corrections, 'data/output-corrections.json')
-        save_json(corrections_hashes, 'data/output-corrections-hashes.json')
+    """Save corrections and their hashes."""
+    structured_corrections = {
+        key: {
+            'original_hash': corrections_hashes[key],
+            'status': 'accepted' if corrections[key]['corrected'] else 'flagged for review',
+            'corrected_text': corrections[key]['text']
+        }
+        for key in corrections
+    }
+    save_json(structured_corrections, 'data/output-corrections.json')
 
 def apply_corrections(data, corrections):
     """Apply corrections on top of the original data."""
     corrected_data = data.copy()
-    corrected_data.update(corrections)
+    for key, correction in corrections.items():
+        if correction['status'] in ['accepted', 'corrected']:
+            corrected_data[key] = correction['corrected_text']
     return corrected_data
 
 def find_differences(original, patched, corrections=None, corrections_hashes=None):
     """Compare two dictionaries and find differences."""
     diffs = []
-    original_hashes = {}
-    for key in patched:
-        if original.get(key, None) != patched[key]:
+    original_hashes = {key: hash_text(value) for key, value in original.items()}
+    for key, value in patched.items():
+        if original.get(key, None) != value:
             original_value = original.get(key, '')
-            patched_value = patched[key]
-            corrected = key in corrections if corrections else False
-            
-            # Check if the hash exists in the corrections_hashes to avoid KeyError
-            if corrections_hashes and key in corrections_hashes:
-                hash_match = hash_text(original_value) == corrections_hashes[key]
-            else:
-                hash_match = False  # Default to False if no hash is found
-            
+            patched_value = value
+            corrected = key in corrections
+            hash_match = original_hashes[key] == corrections_hashes.get(key, '') if key in corrections_hashes else False
             diffs.append((key, original_value, patched_value, corrected, hash_match))
     return diffs
 
@@ -143,7 +147,7 @@ def setup_console(diffs, corrections, corrections_hashes):
                 # Update diffs and preserve all fields including hash_match
                 diffs[index] = (key, o_text, edited_text, corrected, hash_match)
             elif choice == '':
-                corrections[key] = p_text
+                corrections[key] = {'text': p_text, 'corrected': True}
                 # Recalculate and update hash in corrections_hashes to reflect the new original text
                 new_hash = hash_text(o_text)
                 corrections_hashes[key] = new_hash
