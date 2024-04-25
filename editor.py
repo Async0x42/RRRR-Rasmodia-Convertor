@@ -83,7 +83,6 @@ class ProgressDisplay:
         self.table.add_column("Text", justify="left")
         self.table.rows = []
         self.table.add_row(highlight_key(key), highlight_differences(o_text, p_text))
-        self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
         
         # Determine the status text based on the current status in corrections
         status = corrections.get(key, {}).get('status', 'unconfirmed')  # Default to 'unconfirmed' if not found
@@ -99,6 +98,8 @@ class ProgressDisplay:
         self.table.add_row("[bold]Hash Status:[/bold]", hash_status)
         last_updated = corrections.get(key, {}).get('last_updated', 'n/a')  # Safe access with default 'n/a'
         self.table.add_row("[bold]Last Updated:[/bold]", last_updated)
+        self.table.add_row()
+        self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
         self.console.print(self.table)
 
 def highlight_key(key):
