@@ -24,8 +24,11 @@ def save_json(data, filename):
     os.replace(temp_filename, filename)
 
 def save_patch(corrections):
-    """Save only the corrected text for each key to patch.json."""
-    patch_data = {key: correction['corrected_text'] for key, correction in corrections.items() if correction['corrected_text']}
+    """Save only the corrected text for each key to patch.json, skipping 'skipped' entries."""
+    patch_data = {
+        key: correction['corrected_text'] for key, correction in corrections.items()
+        if correction['corrected_text'] and correction.get('status') != 'skipped'
+    }
     save_json(patch_data, 'data/patch.json')
     
 def hash_text(text):
@@ -90,6 +93,8 @@ class ProgressDisplay:
             status_text = "[bold green]ACCEPTED/CORRECTED[/bold green]"
         elif status == 'to_review':
             status_text = "[bold yellow]FLAGGED FOR REVIEW[/bold yellow]"
+        elif status == 'skipped':
+            status_text = "[bold green]SKIPPED[/bold green]"
         else:
             status_text = "[bold red]UNCONFIRMED[/bold red]"
         self.table.add_row("[bold]Status:[/bold]", status_text)
@@ -127,19 +132,20 @@ def edit_text(text):
         session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
     return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
 
-def find_first_unconfirmed(diffs):
-    """Find the index of the first unconfirmed difference."""
-    for i, diff in enumerate(diffs):
-        if not diff[3]:  # diff[3] is the 'corrected' status
+def find_first_unconfirmed(diffs, corrections):
+    """Find the index of the first unconfirmed or flagged for review difference."""
+    for i, (key, o_text, p_text, corrected, hash_match) in enumerate(diffs):
+        status = corrections.get(key, {}).get('status', 'unconfirmed')  # Default to 'unconfirmed' if not found
+        if status in ['unconfirmed', 'to_review']:
             return i
-    return 0  # If all are confirmed, start from the first
+    return -1  # Return -1 if no unconfirmed or to_review diffs found
 
 def setup_console(diffs, corrections):
     """Manage the console UI and save changes."""
     console = Console()
     progress = ProgressDisplay(len(diffs), console)
 
-    index = find_first_unconfirmed(diffs)
+    index = find_first_unconfirmed(diffs, corrections)
     try:
         while True:
             key, o_text, p_text, corrected, hash_match = diffs[index]
@@ -173,6 +179,20 @@ def setup_console(diffs, corrections):
                         'last_updated': datetime.datetime.now().isoformat()
                     }
                 console.print(f"[bold yellow]Flagged '{key}' for review.[/bold yellow]")
+            elif choice == 'k':  # Assume 'k' is the chosen key for toggling skip
+                if key in corrections:
+                    if corrections[key].get('status') == 'skipped':
+                        corrections[key]['status'] = 'unconfirmed'  # Toggle off skip
+                    else:
+                        corrections[key]['status'] = 'skipped'  # Toggle on skip
+                else:
+                    corrections[key] = {
+                        'original_hash': hash_text(o_text),
+                        'corrected_text': p_text,
+                        'status': 'skipped',
+                        'last_updated': datetime.datetime.now().isoformat()
+                    }
+                console.print(f"[bold yellow]Toggled '{key}' skipped status.[/bold yellow]")
             elif choice == '':
                 new_hash = hash_text(o_text)
                 corrections[key] = {'original_hash': new_hash, 'corrected_text': p_text, 'status': 'accepted', 'last_updated': datetime.datetime.now().isoformat()}
