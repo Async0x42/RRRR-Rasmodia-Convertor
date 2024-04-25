@@ -146,6 +146,10 @@ def setup_console(diffs, corrections):
     progress = ProgressDisplay(len(diffs), console)
 
     index = find_first_unconfirmed(diffs, corrections)
+    if index == -1:  # Handle case where no unconfirmed or flagged diffs are found
+        console.print("[bold red]No unconfirmed or flagged differences to display. Starting from 0.[/bold red]")
+        index = 0
+    
     try:
         while True:
             key, o_text, p_text, corrected, hash_match = diffs[index]
