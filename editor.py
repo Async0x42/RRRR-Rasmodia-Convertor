@@ -131,7 +131,7 @@ def setup_console(diffs, corrections):
             key, o_text, p_text, corrected, hash_match = diffs[index]
             progress.update_progress(index + 1, key, o_text, p_text, corrected, hash_match)
             console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold] or [bold]'n <number>'[/bold] to jump[/blue]")
-            console.print("[blue][bold]'d'[/bold] to delete, [bold]'e'[/bold] to edit, [bold]'s'[/bold] to save all, [bold]'enter'[/bold] to accept and move next, or [bold]'q'[/bold] to save and quit[/blue]")
+            console.print("[blue][bold]'d'[/bold] to delete, [bold]'e'[/bold] to edit, [bold]'s'[/bold] to save all, [bold]'f'[/bold] to flag for review, [bold]'enter'[/bold] to accept and move next, or [bold]'q'[/bold] to save and quit[/blue]")
             choice = console.input("Command: ").strip().lower()
 
             if choice == 'q':
@@ -146,6 +146,9 @@ def setup_console(diffs, corrections):
             elif choice == 's':
                 save_patch(corrections)
                 console.print("[bold green]All corrections saved to patch.json![/bold green]")
+            elif choice == 'f':
+                corrections[key] = {'original_hash': hash_text(o_text), 'corrected_text': p_text, 'status': 'to_review'}
+                console.print(f"[bold yellow]Flagged '{key}' for review.[/bold yellow]")
             elif choice == '':
                 new_hash = hash_text(o_text)
                 corrections[key] = {'original_hash': new_hash, 'corrected_text': p_text, 'status': 'accepted'}
