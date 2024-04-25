@@ -6,6 +6,7 @@ from rich.text import Text
 from prompt_toolkit import PromptSession
 import hashlib
 import os
+import datetime
 
 def load_json(filename):
     """Load JSON data from a file."""
@@ -37,7 +38,8 @@ def save_corrections(corrections):
         key: {
             'original_hash': corrections[key]['original_hash'],
             'status': corrections[key]['status'],
-            'corrected_text': corrections[key]['corrected_text']
+            'corrected_text': corrections[key]['corrected_text'],
+            'last_updated': corrections[key]['last_updated']
         }
         for key in corrections
     }
@@ -72,7 +74,7 @@ class ProgressDisplay:
         self.console = console
         self.table = Table()
 
-    def update_progress(self, current, key, o_text, p_text, corrected, hash_match):
+    def update_progress(self, current, key, o_text, p_text, corrected, hash_match, corrections):
         """Update the progress displayed on the console."""
         self.current = current
         self.console.clear()
@@ -82,10 +84,21 @@ class ProgressDisplay:
         self.table.rows = []
         self.table.add_row(highlight_key(key), highlight_differences(o_text, p_text))
         self.table.add_row("[bold blue]Diff Progress:[/bold blue]", f"[dark_blue]{self.current}/{self.total}[/dark_blue]")
-        status_text = "[bold green]ACCEPTED/CORRECTED[/bold green]" if corrected else "[bold red]UNCONFIRMED[/bold red]"
+        
+        # Determine the status text based on the current status in corrections
+        status = corrections.get(key, {}).get('status', 'unconfirmed')  # Default to 'unconfirmed' if not found
+        if status == 'accepted':
+            status_text = "[bold green]ACCEPTED/CORRECTED[/bold green]"
+        elif status == 'to_review':
+            status_text = "[bold yellow]FLAGGED FOR REVIEW[/bold yellow]"
+        else:
+            status_text = "[bold red]UNCONFIRMED[/bold red]"
         self.table.add_row("[bold]Status:[/bold]", status_text)
+    
         hash_status = "[bold green]HASH MATCH[/bold green]" if hash_match else "[bold red]HASH MISMATCH[/bold red]"
         self.table.add_row("[bold]Hash Status:[/bold]", hash_status)
+        last_updated = corrections.get(key, {}).get('last_updated', 'n/a')  # Safe access with default 'n/a'
+        self.table.add_row("[bold]Last Updated:[/bold]", last_updated)
         self.console.print(self.table)
 
 def highlight_key(key):
@@ -129,7 +142,7 @@ def setup_console(diffs, corrections):
     try:
         while True:
             key, o_text, p_text, corrected, hash_match = diffs[index]
-            progress.update_progress(index + 1, key, o_text, p_text, corrected, hash_match)
+            progress.update_progress(index + 1, key, o_text, p_text, corrected, hash_match, corrections)
             console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold] or [bold]'n <number>'[/bold] to jump[/blue]")
             console.print("[blue][bold]'d'[/bold] to delete, [bold]'e'[/bold] to edit, [bold]'s'[/bold] to save all, [bold]'f'[/bold] to flag for review, [bold]'enter'[/bold] to accept and move next, or [bold]'q'[/bold] to save and quit[/blue]")
             choice = console.input("Command: ").strip().lower()
@@ -147,11 +160,21 @@ def setup_console(diffs, corrections):
                 save_patch(corrections)
                 console.print("[bold green]All corrections saved to patch.json![/bold green]")
             elif choice == 'f':
-                corrections[key] = {'original_hash': hash_text(o_text), 'corrected_text': p_text, 'status': 'to_review'}
+                if key in corrections:
+                    # Update only the status if the key already exists
+                    corrections[key]['status'] = 'to_review'
+                else:
+                    # Create a new entry if the key does not exist
+                    corrections[key] = {
+                        'original_hash': hash_text(o_text),
+                        'corrected_text': p_text,
+                        'status': 'to_review',
+                        'last_updated': datetime.datetime.now().isoformat()
+                    }
                 console.print(f"[bold yellow]Flagged '{key}' for review.[/bold yellow]")
             elif choice == '':
                 new_hash = hash_text(o_text)
-                corrections[key] = {'original_hash': new_hash, 'corrected_text': p_text, 'status': 'accepted'}
+                corrections[key] = {'original_hash': new_hash, 'corrected_text': p_text, 'status': 'accepted', 'last_updated': datetime.datetime.now().isoformat()}
                 diffs[index] = (key, o_text, p_text, True, True)
                 index = (index + 1) % len(diffs)
             elif choice.startswith('n '):
