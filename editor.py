@@ -147,9 +147,8 @@ def setup_console(diffs, corrections):
                 save_patch(corrections)
                 console.print("[bold green]All corrections saved to patch.json![/bold green]")
             elif choice == '':
-                corrections[key] = {'corrected_text': p_text, 'status': 'accepted'}
                 new_hash = hash_text(o_text)
-                corrections[key]['original_hash'] = new_hash
+                corrections[key] = {'original_hash': new_hash, 'corrected_text': p_text, 'status': 'accepted'}
                 diffs[index] = (key, o_text, p_text, True, True)
                 index = (index + 1) % len(diffs)
             elif choice.startswith('n '):
