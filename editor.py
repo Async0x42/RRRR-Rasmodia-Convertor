@@ -169,6 +169,7 @@ def setup_console(diffs, corrections):
                 diffs[index] = (key, o_text, edited_text, corrected, hash_match)
             elif choice == 's':
                 save_patch(corrections)
+                save_corrections(corrections)
                 console.print("[bold green]All corrections saved to patch.json![/bold green]")
             elif choice == 'f':
                 if key in corrections:
