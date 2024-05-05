@@ -652,5 +652,395 @@
         "status": "accepted",
         "corrected_text": "Ah, good morning, my heart. How are you this morning?${{e9}}#$b#I know that you are busy so I shall not hold you for too long, but may I request a small favour of affection this morn?${{e6}}#$b#It would make a certain very old witch very happy.${{e4}}#$e#%I gave Rasmodia a long kiss on the lips.#$b#Mmm...${{e6}}#$b#Thank you for indulging your clingy wife, my heart.${{e6}}",
         "last_updated": "2024-05-05T13:19:55.292936"
+    },
+    "Married.Wizard.Indoor_Day_1_5": {
+        "original_hash": "4f91ac6842f7ae09c2cb7c489c299b56d7c02e57f79deb83575f118b358161b4",
+        "status": "accepted",
+        "corrected_text": "Have you considered what niche you're interested in developing, @?${{e0}}#$b# There's no rush, of course, but it doesn't hurt to think about.${{e1}}#$e# The Ministry of Magic often likes to attach topics of expertise to official magical monikers.${{e3}}#$b#It is worth considering if you don't want to end up with something odd like 'Witch of Strange Masks.' ${{e3}}#$b#That unfortunate moniker belongs to a young witch I came across while visiting the Order. ${{e1}}#$e#What's my official moniker?${{e7}}#$b#It's 'Witch of Planes'.${{e0}}#$b#Honestly, 'Witch of Energies' would have been much more accurate.${{e3}}#$e#...Ah, the flashy list of titles I gave you when we first met is just how I attempt to intimidate mortals. Please completely banish it from your mind if possible.${{e8}}",
+        "last_updated": "2024-05-05T13:55:09.681079"
+    },
+    "Married.Wizard.Indoor_Day_2_5": {
+        "original_hash": "41a24590da60de68deaf11670e998093b19c3e14834744fc7ce1f5253c0c42a6",
+        "status": "accepted",
+        "corrected_text": "Off on another busy day, my heart?${{e1}}#$b#Do not hesitate to return home for rest if you are so inclined.${{e9}}#$b#I shall be here in the case you would like to spend some time together.${{e6}}#$e#Hmm? What my plans are?${{e7}}#$b#Nothing exciting, I'm afraid.${{e0}}#$b#Even a witch must devote time to documentation and other such paperwork from time to time.${{e3}}#$b#I would welcome some quiet company if you are free, however.${{e6}}",
+        "last_updated": "2024-05-05T13:55:12.418503"
+    },
+    "Married.Wizard.Indoor_Day_2_6": {
+        "original_hash": "88c1275b17c1db6698612c57df93ef7c7bc738aa25bd93b123cd513792d2058f",
+        "status": "accepted",
+        "corrected_text": "Ah, good morning, my heart.${{e6}}#$b#Please give me a moment and I shall get out of your way so you may cook breakfast.${{e0}}#$e#...Yes, I was studying the stove once more.${{e3}}#$b#...I realize that it must seem very comical that an individual who has mastered wielding the energies of the world struggles as much as I do with technology...${{e2}}#$b#...I suppose I simply am a stubborn old woman who is too set in her ways.${{e3}}#$e#I shall adapt it eventually! I swear it!${{e5}}",
+        "last_updated": "2024-05-05T13:55:16.841672"
+    },
+    "Married.Wizard.Indoor_Day_3_7": {
+        "original_hash": "3cb36c331e471798bdfa40c4dec83ee37fb0aa9077522ab35a08aa9e7ba94ef2",
+        "status": "accepted",
+        "corrected_text": "Ah, already awake, my heart?${{e6}}#$b#I assumed you would have wished to remain in bed for a while long considering the night we had.${{e4}}#$b#*Chuckles* I am glad my efforts in healing you did not go to waste.${{e6}}#$b#Have a wonderful day, beloved.${{e6}}#$e#Do tell me if you feel any aches or pains, however.${{e3}}#$b#As flawed as my methods may be, there is no reason to suffer when you possess a healer for a wife.${{e9}}",
+        "last_updated": "2024-05-05T13:55:23.289558"
+    },
+    "Married.Wizard.Indoor_Night_AtHome_0_4": {
+        "original_hash": "d89e4b600e0a06acdd8e22ffc4b744d8b17b7d4c83e18270e5d3fe372e6e12c1",
+        "status": "accepted",
+        "corrected_text": "I must say I enjoy sleeping in your farmhouse far more than my tower.${{e9}}#$b#I think it may be due to your scent being stronger here.${{e3}}#$b#Not that I didn't notice how much of an... effort you were making... adjusting my bed for me.${{e4}}#$e#How can you call me a lewd old woman when you were the one who made me like this in the first place, @?${{e6}}#$b#Take some responsibility!${{e4}}",
+        "last_updated": "2024-05-05T13:55:31.648375"
+    },
+    "Married.Wizard.Indoor_Night_AtHome_0_7": {
+        "original_hash": "c958db95f49145a8b27fdb58c49a25501c48ee7b685970c58062960c9cc0f489",
+        "status": "accepted",
+        "corrected_text": "Ah, brilliant timing, my heart.${{e9}}#$b#I was just thinking of you.${{e1}}#$b#No, I had nothing planned in particular for tonight. I simply wanted to see you.${{e4}}#$b#...Although, a kiss would certainly be welcome.${{e4}}#$e#%I gave Rasmodia a long welcome home kiss.#$b#*Chuckles* Thank you, beloved.${{e6}}",
+        "last_updated": "2024-05-05T13:55:35.015532"
+    },
+    "Married.Wizard.Indoor_Night_AtHome_1_3": {
+        "original_hash": "842fbf22454b6aca1e67141bfce12c9331c4ccfbc5d8586acada1c341019e7a6",
+        "status": "accepted",
+        "corrected_text": "I'm sure you had a productive day today. Make sure you take the time to relax this evening.${{e9}}#$b#%Rasmodia smiles at me and interlaces our fingers.#$b#...Or would you prefer something else? ${{e4}}",
+        "last_updated": "2024-05-05T17:49:51.163324"
+    },
+    "Married.Wizard.Indoor_Night_AtHome_2_6": {
+        "original_hash": "033f7b41211bf8d35c0f11dd13e9d6e8fe96c249179649c7cc47908713a0abc0",
+        "status": "accepted",
+        "corrected_text": "Ah, once again your grace me with you presence, my heart.${{e4}}#$b#Yes, I realize it has only been mere hours since we've seen each other, but I cannot help but rejoice when we are reunited all the same.${{e9}}#$b#Come, shed off your burdens of the day and allow your terribly overdramatic wife to shower you with love once more.${{e6}}",
+        "last_updated": "2024-05-05T17:49:54.587523"
+    },
+    "Married.Wizard.Indoor_Night_AtHome_3_Early_0": {
+        "original_hash": "617e916b611c1da3adfe1f689098503f3b4a50063f2ccb4a752dd3d3e7b1e214",
+        "status": "accepted",
+        "corrected_text": "Sometimes I do not know how to feel of my traversal through town.${{e3}}#$b#I have spent a very long time separating myself from the mortal world only to find it has left me far behind despite my attempts at observation.${{e3}}#$b#Perhaps I am doomed to remain an alien to the mundane, yet I shall continue to try nonetheless.${{e3}}#$b#What sort of wife am I if I do not even attempt to know more of the world that birthed you?${{e6}}",
+        "last_updated": "2024-05-05T17:49:56.649239"
+    },
+    "Married.Wizard.Indoor_Night_AtTower_3_3": {
+        "original_hash": "de398638e191d0156528f12f480725eaf4bab096f3ee9a9e5fbf703c26700fc8",
+        "status": "accepted",
+        "corrected_text": "It's good to finally be home, my love.${{e1}}#$b#Many colleagues have been asking of you recently.${{e0}}#$b#Part of me longs to gush of your perfection, yet the other wishes to shield you from all prying eyes.${{e3}}#$b#It is a difficult dilemma.${{e5}}#$b#You will meet them all on your own terms eventually as you have with Camilla, but I can't help but miss the days when I had a near monopoly of your attention.${{e2}}#$b#Sorry for being a selfish old woman.${{e6}}",
+        "last_updated": "2024-05-05T17:50:00.524760"
+    },
+    "Married.Wizard.Indoor_Night_AtTower_3_5": {
+        "original_hash": "f506378eb6d72a4f3988d1b828d6e652165ac2485c4cea18d4311f6770d8d67f",
+        "status": "accepted",
+        "corrected_text": "It's good to see you, my love.${{e9}}#$b#I've had a rather exhausting day.${{e3}}#$b#...Would you mind if I held you briefly? I just need a moment to consolidate my mana.${{e3}}#$b#%Rasmodia wraps her arms around me and holds on to me tight, the tension in her body slowly melting away. #$b#Thank you for that, my love.${{e9}}#$b#Your aura always grounds me.${{e6}}",
+        "last_updated": "2024-05-05T17:50:58.718852"
+    },
+    "Married.Wizard.Indoor_Night_AtTower_4_1": {
+        "original_hash": "a7ae52f2455acfcad2a179bac5adf1d9fe616688ef4e9454d8b4e3e90281976a",
+        "status": "accepted",
+        "corrected_text": "Core of my heart, I have finally returned!${{e6}}#$b#%Rasmodia pulled me into a warm embrace...#$b#Ah, how wonderful it is to be home.${{e6}}",
+        "last_updated": "2024-05-05T17:51:03.096158"
+    },
+    "Married.Wizard.Indoor_Night_AtTower_4_5": {
+        "original_hash": "a41522424e01a1ab985a4ac838175ab2a238bc63585a9282b146a1bbe5ca3f83",
+        "status": "accepted",
+        "corrected_text": "@~ ${{e6}}#$b#How glad I am to return to you, my heart.${{e6}}#$b#May I have a small kiss? I have been craving another one since we parted ways this morning.${{e4}}#$e#%Rasmodia and I shared a long kiss.#$b# *Chuckles* Thank you for indulging your needy wife, my heart.${{e4}}",
+        "last_updated": "2024-05-05T17:51:07.133016"
+    },
+    "Married.Wizard.Indoor_Night_AtTower_4_6": {
+        "original_hash": "4d4a290dc1d4355f92caa74a5eb494f771eb27e0bd926e7f23fa4dd6d0a5d2c7",
+        "status": "accepted",
+        "corrected_text": "Ah, beloved? ${{e8}}#$b#%I pull Rasmodia into a hug and give her a long kiss welcome home the moment she walks through the door.#$b#Mmmmm...${{e4}}#$b#Thank you, my heart.${{e6}}#$e#You certainly know how to make an old witch feel special.${{e6}} ",
+        "last_updated": "2024-05-05T17:51:16.362775"
+    },
+    "Married.Wizard.Indoor_Night_AtTower_4_YesArti_8": {
+        "original_hash": "e5d4e4bd05eeb87620e15736c20e1885dda7572309755eb40014a3ef4a3e9732",
+        "status": "accepted",
+        "corrected_text": "*Chuckles* Welcoming me home, against, my heart?${{e4}}#$b#%Rasmodia pulled me close and peppered kisses all over my face...#$b#While the artifact does much to give the illusion that you are always near, having you in front of me will always be my greatest joy in this life and the next.${{e6}}",
+        "last_updated": "2024-05-05T17:51:18.910666"
+    },
+    "Married.Wizard.Outdoor_Base_3": {
+        "original_hash": "d63bb05002a2d6158bb7dcd63060f604abcf0da8c22bd059c96987e4036b5834",
+        "status": "accepted",
+        "corrected_text": "I've always enjoyed being outdoors to being cooped up inside. I find it limits one's view of the world too much.${{e9}}#$b#Yes, I realize the irony of that statement coming from a recluse who recently stayed within her tower for longer than most humans have lived.${{e3}}#$b#To my credit, I have also spent more than a handful of lifetimes travelling.${{e0}}#$b#What I truly lack is a balance between those two extremes.${{e3}}",
+        "last_updated": "2024-05-05T17:51:25.075708"
+    },
+    "Married.Wizard.Outdoor_0_4": {
+        "original_hash": "258a72cd8077992c41b45128b9eeaa93a8d0566573c6c7a594e20f6612103883",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia is humming a little song to herself.#$b# Ah, do not mind me. I am simply in a good mood since I am able to spend the morning with you, my heart.${{e1}}#$e#Go on. There is nothing I love more than watching you take joy from your work.${{e6}}",
+        "last_updated": "2024-05-05T17:51:29.457008"
+    },
+    "Married.Wizard.OneKid_0_1.1": {
+        "original_hash": "fcd9e8f90fba5459b85796b0a45e1b7935c8ca6892604654b9dd154303f08711",
+        "status": "accepted",
+        "corrected_text": "Despite the focus I have on my studies, I had always wanted to be a mother. At long last, I can see this wish come true.",
+        "last_updated": "2024-05-05T17:51:34.894065"
+    },
+    "Married.Wizard.TwoKids_0_1.1": {
+        "original_hash": "a43b7793f344f42365fd5beb4a60b7ba5aa795f248daa72969fc12247e1e6829",
+        "status": "accepted",
+        "corrected_text": "When I said I wished to be a mother, I do not think I fully understood the implications.",
+        "last_updated": "2024-05-05T17:51:39.029719"
+    },
+    "Married.Wizard.TwoKids_0_3.2": {
+        "original_hash": "a129951f38e84d2f80aaccdc9254866553f1bdfe0c816a4387fd6055812836d8",
+        "status": "accepted",
+        "corrected_text": "Rasmodia smiles at me.",
+        "last_updated": "2024-05-05T17:51:40.534172"
+    },
+    "Married.Wizard.TwoKids_2_1.3": {
+        "original_hash": "be1d4001132985e769ef989ead9e800184160c987c525424eced9d06f094e610",
+        "status": "accepted",
+        "corrected_text": "Is this what it means to be a mother?",
+        "last_updated": "2024-05-05T17:51:42.315899"
+    },
+    "Married.Wizard.TwoKids_3_1.4": {
+        "original_hash": "9b1cdd03ff2236e89324198e91d2e1c6dc8a8b6f9af0844f15f4606d46800ac7",
+        "status": "accepted",
+        "corrected_text": "A mother, I hope. And nothing less.",
+        "last_updated": "2024-05-05T17:51:44.698565"
+    },
+    "Married.Wizard.Good_0_1": {
+        "original_hash": "e31d822316aea049824317b34ae6587091fe90dab8c410f50829a0eeba5e1707",
+        "status": "accepted",
+        "corrected_text": "Once I was a young woman, foolish and restless and hungry for knowledge.${{e3}}#$b#I used to lament the loss of those days - it is an oft-stated tragedy that youth is wasted on the young - but I have come to realize that such days of vibrant energy are not lost to me.${{e9}}#$b#You have brought them back, @.${{e6}}#$b#You give me life anew, as I never expected to have.${{e9}}#$b#For this I can never repay you, but ever will I try.${{e4}}",
+        "last_updated": "2024-05-05T17:51:47.363059"
+    },
+    "Married.Wizard.Good_0_Early_5": {
+        "original_hash": "c183439c0e593851efbffef08937e7963f75eb2e8b7f2152d8ebb55a95ad863f",
+        "status": "accepted",
+        "corrected_text": "...Despite the bliss I feel each and every day, I still cannot believe that one such as I deserves the love you've given me after all I have done in this endless lifetime.${{e3}}#$b#...It is almost as if I am demeaning you in some way...${{e2}}#$b#After all, you have far better choices than an old witch who is far past her prime.${{e3}}#$e#Yes, I realize that it is not fair of me to project such feelings on to you, but such thoughts are inevitable when faced with your perfection.${{e6}}#$b#Nonetheless, I will attempt to change because it is what you hope of me, my heart.${{e9}}",
+        "last_updated": "2024-05-05T17:51:51.596373"
+    },
+    "Married.Wizard.Good_0_Early_7": {
+        "original_hash": "3d6340f45e572e285264a6a7165f0b36f4fd5f8112c149ac81d0a2c071bc7861",
+        "status": "accepted",
+        "corrected_text": "Ah, @! I have been researching what common couple activities are for this era.${{e6}}#$b#I still have much to learn, but I am determined to be a good wife to you, my love.${{e9}}#$e#No matter what we do or where we go, be it magical or mundane, as long as we're together, there will be joy to be found. I'm sure of it.${{e4}}",
+        "last_updated": "2024-05-05T17:51:53.480370"
+    },
+    "Married.Wizard.Good_0_Late_8": {
+        "original_hash": "db2672b5ee634eff117adfdb367a93f204278fdb713d48b0a368cd57112ae0ba",
+        "status": "accepted",
+        "corrected_text": "...I still do not wholly believe that I truly deserve your sincere love and affection, @.${{e3}}#$b#Yet, I cannot bear even the thought of parting with you...${{e2}}#$b#Please forgive this selfish wife of yours, my heart.${{e2}}",
+        "last_updated": "2024-05-05T17:51:56.761133"
+    },
+    "Married.Wizard.Good_1_0": {
+        "original_hash": "4cef00b0b3a26067abf28cddea8ed23a53754fea86a783fe9783b4728989457e",
+        "status": "accepted",
+        "corrected_text": "Hmmm? What's this? My wonderful partner is in need of a little attention?${{e6}}^Hmmm? What's this? My beautiful wife is in need of a little attention?${{e6}}#$b#Allow me to indulge you then, my heart.${{e4}}#$b#%Rasmodia takes me into her arms, dipping me downwards as she plants a deep kiss on my lips...#$b#%After more than a minute, she finally pulls away, leaving me more than a little light-headed....#$b#*Chuckles* I've been meaning to try that.${{e6}}",
+        "last_updated": "2024-05-05T17:52:11.352307"
+    },
+    "Married.Wizard.Good_1_5": {
+        "original_hash": "40e9848244d091bf94928d98ac70843fd86cc44184bb25970c3de0d4a4253401",
+        "status": "accepted",
+        "corrected_text": "Ah, @!${{e6}}#$b#I didn't want to disturb your sleep, but now that you have awoken...${{e4}}#$b#%Rasmodia interlaced our fingers before pressing a kiss on my lips.#$b#....Good morning, my love. I am ever blessed to remain in the brilliance of your light.${{e6}}",
+        "last_updated": "2024-05-05T17:52:21.195951"
+    },
+    "Married.Wizard.Good_1_6": {
+        "original_hash": "a3a49959f5a3625bd9961c61f3f1035e0ddcd37e37a98367b7d3147e8e324aee",
+        "status": "accepted",
+        "corrected_text": "@... My brilliant star... ${{e4}}#$b#%Rasmodia planted a kiss on my lips before offering me a bright smile.#$b#Have a wonderful day, my love.${{e6}}#$e#Ah, do tell me if I am a little too... 'handsy' at any point.${{e3}}#$b#...It would appear I am more starved of human touch than even I predicted.${{e6}}",
+        "last_updated": "2024-05-05T17:52:24.546087"
+    },
+    "Married.Wizard.Good_2_2": {
+        "original_hash": "e1d99df5d8151c0d7cfb072d4a16388e5d9c8653913ae5d0595f183958e730a1",
+        "status": "accepted",
+        "corrected_text": "You know... I fell for you long before you gave me that bouquet.${{e4}}#$b#I never said a word.${{e3}}#$b#I thought you could never love a woman like me.${{e2}}#$b#...How wrong I was....${{e8}}",
+        "last_updated": "2024-05-05T17:52:26.674470"
+    },
+    "Married.Wizard.Good_2_3": {
+        "original_hash": "ac43985380435eecae0dd79494367306c6552ae209fcbaa846a7fa3bf9ab4a2f",
+        "status": "accepted",
+        "corrected_text": "With all the heartache in my past, I never thought I'd wake up to days as sweet as these...${{e8}}#$b#Thank you for giving an aloof old witch a chance, my heart.${{e4}}",
+        "last_updated": "2024-05-05T17:52:29.160780"
+    },
+    "Married.Wizard.Good_3_6": {
+        "original_hash": "7651b8bab9ac8ddd90147baff05e7f0baf7db9a90fe30bdd5c7e0d511c2484a3",
+        "status": "accepted",
+        "corrected_text": "Hmmm?${{e7}}#$b# Ah, of course you may have a kiss, my love!${{e6}}#$b#In fact, I should be the one thanking you instead.${{e4}}#$b#%Rasmodia cups my face, brushing the corner of my eyes, expression full of affection before finally pressing our lips together.#$e#Amazing as always...${{e4}}",
+        "last_updated": "2024-05-05T17:52:30.528051"
+    },
+    "Married.Wizard.Good_4_0": {
+        "original_hash": "303844ccb850a93a42e22bf5d25079d0fd4a8bccfd8aff9c51759456d231944d",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia seems pretty distracted mumbling to herself....#$b#You are the most brilliant star in my sky, the sun that shines on even the darkest corners of my endless night...${{e6}}#$b#......Does the 'most brilliant star' not already imply the sun?${{e3}}#$b#Perhaps I should pick something else.${{e3}}#$e#Hmm?${{e7}}#$b#AH! @! How long were you listening!?${{e8}}#$e#...Yes, I was practicing complimenting you.${{e6}}#$b#Please pretend you did not hear anything.${{e8}}",
+        "last_updated": "2024-05-05T17:52:34.497259"
+    },
+    "Married.Wizard.Good_4_1": {
+        "original_hash": "0ce158cfac35d3907a033242fdabd7a829bb7cd39f4e1e68bc2ff60152080f54",
+        "status": "accepted",
+        "corrected_text": "Have I expressed, lately, how I feel for you? If not, I have been remiss.${{e3}}#$b#My love for you overwhelms every other truth of my soul.${{e4}}#$b#Without you, I was a husk of a woman, adrift in a world without meaning.${{e2}}#$b#With you, I am as a slate wiped clean, free to venture without the crushing weight of my past.${{e6}}#$b#I have no regrets, anymore.${{e4}}",
+        "last_updated": "2024-05-05T17:52:38.528842"
+    },
+    "Married.Wizard.Good_4_Early_6": {
+        "original_hash": "d1af33aada2fee22acda3606bfdfde09dc43e4b452af0bdfd70dc96f9560c3a4",
+        "status": "accepted",
+        "corrected_text": "I have been studying more on the topic of being a 'good wife' recently.${{e3}}#$b#Finding a true consensus has been more difficult than I initially expected.${{e3}}#$b#No matter! I shall continue looking, @!${{e5}}#$e#Anything for your happiness.${{e6}} ",
+        "last_updated": "2024-05-05T17:52:41.842702"
+    },
+    "Married.Wizard.Good_4_Late_6": {
+        "original_hash": "0945fb9bd4e77432d647a8a0c45330e55d7c830ab7251c28cb387e4c16eeaaa3",
+        "status": "accepted",
+        "corrected_text": "I have been putting more thought into the concept of a 'good wife'.${{e0}}#$b#I now realize that my original approach of searching for specific criteria was a rather flawed one, but I am glad I researched it as I did.${{e9}}#$b#It has certainly helped with understanding what it is you expect and hope of me, @.${{e1}}#$b#Such an understanding is more valuable than my entire tower's weight in gold.${{e4}} ",
+        "last_updated": "2024-05-05T17:52:44.872874"
+    },
+    "Married.Wizard.Good_4_Early_8": {
+        "original_hash": "774e95476d5dc4a30af45896d1ea9f0d0a4890ef7ef801afa193ec570c56fe65",
+        "status": "accepted",
+        "corrected_text": "Some days I'm afraid I'll open my eyes and wake up alone at the tower, learning that this bliss was all a cruel fantasy my lonely mind conjured while blinded by grief.${{e3}}#$b#I don't think even the most jaded heart could withstand that, @.${{e2}}#$b#%I interlaced my hands with Rasmodia and gave her a little reassuring kiss on the cheek.#$b#...Thank you. I needed that.${{e6}}",
+        "last_updated": "2024-05-05T17:52:50.872841"
+    },
+    "Married.Wizard.Good_5_6": {
+        "original_hash": "dd26d579b7c0efb53aff0f51efc92e8141ebdb2f9e89e1dfbe14fd4e34e76f72",
+        "status": "accepted",
+        "corrected_text": "Hmmm?${{e7}}#$b#%I throw my arms around Rasmodia, surprising her with a hug.#$b#%She practically melts into our shared embrace.#$b#Beloved.....${{e4}}#$b#Thank you. I was just thinking of asking for a moment to hold you mere minutes ago.${{e6}}",
+        "last_updated": "2024-05-05T17:52:53.836418"
+    },
+    "Married.Wizard.Good_6_3": {
+        "original_hash": "b1fdecf87a8fd1e8aad490f8b92061c980043c217a22257e8b851c3ca64ffcaf",
+        "status": "accepted",
+        "corrected_text": "I don't know if you've noticed it yourself, @, but many strings of fate spanning across the valley are anchored to your soul specifically.${{e3}}#$b#It is the reason I was tasked with observing, assisting, and guiding you by both the Order and Ministry.${{e0}}#$b#Never did I expect to the thickest thread to be mine.${{e6}}#$e#For once I'm thankful for being the Ministry's glorified reserve mana battery. ${{e3}}#$b#After all, those who hold such roles are rarely sent on obscure missions to unknown places never seen by the likes of woman.${{e3}}#$b#Don't tell them, though. Those nosey bastards will never let me live it down.${{e5}}",
+        "last_updated": "2024-05-05T17:52:56.706383"
+    },
+    "Married.Wizard.Good_7_0": {
+        "original_hash": "d6e503a33fd631eaa28701b3fb12c8343c8cb2401a1506ae295fc2796df3aa10",
+        "status": "accepted",
+        "corrected_text": "My heart, may I ask for a kiss?${{e6}}#$b#Why?${{e7}}#$b#...Can I not simply wish to kiss you?${{e6}}#$b#%I hooked my arms around Rasmodia's neck and pulled her down for a kiss.#$b#*Chuckles* Thank you for indulging our needy wife, my love.${{e4}}",
+        "last_updated": "2024-05-05T18:02:08.422612"
+    },
+    "Married.Wizard.Good_7_6": {
+        "original_hash": "e840c5aa5d3746f41428750160df6e21d37d433c104690d4a4112a3fc54f4881",
+        "status": "accepted",
+        "corrected_text": "My heart, what are your thoughts on spending some time together this evening to simply be together?${{e6}}#$b#I realize that it is rather early in the day to make such a request, but there is no denying how late your days sometimes run.${{e3}}#$e#Ah, there is no occasion.${{e7}}#$b#Your clingy wife merely wanted to cuddle and whisper sweet nothings to you for a few hours.${{e4}} ",
+        "last_updated": "2024-05-05T18:02:10.545531"
+    },
+    "Married.Wizard.Good_7_Early_7": {
+        "original_hash": "d11002cbcedf268920dbaf1f5c3e63e5ac3d6b56f2a68c557a479a58813f08b1",
+        "status": "accepted",
+        "corrected_text": "There are potent energies about your grandfather's shrine.${{e0}}#$b#I suspect a faint pathway to the astral plane has settled there due to the intrinsic link he shares with both you and this valley.${{e3}}#$e#There is much debate of why and how certain souls behave once they leave the material plane.${{e0}}#$b#I have personally contributed to more than a handful of such studies due my intrinsic connection to the astral plane.${{e0}}#$b#It is never entirely pleasant, but it is a small personal sacrifice compared to the difficulty of reaching such places without the assistance of a planes Witch.${{e3}}",
+        "last_updated": "2024-05-05T18:02:13.631604"
+    },
+    "Married.Wizard.Good_7_Late_7": {
+        "original_hash": "0aa937324ab97e4cd7fe58352a6fc73493ae2dd9e5cafb9fa1639656fffab8d1",
+        "status": "accepted",
+        "corrected_text": "There are potent energies about your grandfather's shrine.${{e0}}#$b#I suspect a faint pathway to astral plane has settled there due to the intrinsic link she shares with both you and this valley.${{e3}}#$e#You've seen her in your dreams?${{e7}}#$b#Fascinating! Perhaps I will look into it if I have some spare time.${{e9}}",
+        "last_updated": "2024-05-05T18:02:21.313417"
+    },
+    "Married.Wizard.Good_8_5": {
+        "original_hash": "4236e3fab850af64809f453566f4e21a1a61f4b0d2fa8001461a1d7d67439b27",
+        "status": "accepted",
+        "corrected_text": "Ah, beloved, are you leaving for the day?${{e9}}#$b#In that case allow me to give you a quick kiss goodbye.${{e6}}#$b#%Rasmodia leaned down to press a little kiss on my lips before leaving another on my forehead....#$b#*Chuckles* Yes, I said one kiss, but what kind of dotting wife would I be if I did not afford someone as brilliant as you a little extra affection?${{e6}}#$b#Have a wonderful day, @. I shall await your return as I do every such day.${{e4}}",
+        "last_updated": "2024-05-05T18:02:25.441767"
+    },
+    "Married.Wizard.Neutral_0_4": {
+        "original_hash": "d2455539990809e34ba40985d5810c569cd850c7741ad7436f51c5ad7d0bfc59",
+        "status": "accepted",
+        "corrected_text": "Hmm? My observations on the town?${{e3}}#$b#Ah, I suppose I should clarify. I do not want you thinking that your wife is a voyeur after all.${{e1}}#$b#My duties largely involved watching for potential signs of changing trends, identifying and confiscating any found magical artifacts, and monitoring monster activity.${{e0}}#$b#I am also meant to protect the town, but that is more of a blanket task all practitioners must complete rather than something specifically assigned to me.${{e0}}#$b#In truth, I did not spend much time watching the villagers but I did pay special attention to you.${{e6}}#$b#You were my charge after all. It was my responsibility to attempt to guide you on a brighter path considering fate's plans for you.${{e0}}#$b#...I simply never realized I would be approaching the task in as hands-on of a way as I did.${{e8}}",
+        "last_updated": "2024-05-05T18:02:32.421719"
+    },
+    "Married.Wizard.Neutral_1_1": {
+        "original_hash": "58b07bcb53b7ffe0c16a884e46df7fa10eebc05b119e8c3358c5e5885e4a2c8b",
+        "status": "to_review",
+        "corrected_text": "Your grandfather was a tenacious woman.${{e0}}#$b#While she lacks your talent, she made up for much through sheer determination.${{e3}}#$b#I can see where you get your spirit, @.${{e6}}",
+        "last_updated": "2024-05-05T18:02:36.621885"
+    },
+    "Married.Wizard.Neutral_4_3": {
+        "original_hash": "04380ac40f0d7873a7c1380bba3277d1b846b679b628a64d197646e428dd89af",
+        "status": "accepted",
+        "corrected_text": "Occasionally, a combat-orientated practitioner will hear of my participation in the Elemental Wars and long adventuring record.${{e0}}#$b#This usually sparks a strange worship-like attitude in them I do not particularly enjoy, but I am still willing to offer small tips if asked.${{e3}}#$e#Hmm? You would like some tips as well?${{e7}}#$b#Considering there will be many more years before you are ready to incorporate offensive spells in battle, I would suggest investing time in your martial prowess.${{e9}}#$b#You are already very skilled as is already, my love. Do not expect too much from your old wife if you actually wish to have me as your instructor.${{e6}}",
+        "last_updated": "2024-05-05T18:02:41.032192"
+    },
+    "Married.Wizard.Neutral_4_6": {
+        "original_hash": "666601774bd7a244b4aeefad6c630a559417d5bf468d7209f9b5d36d38e45979",
+        "status": "to_review",
+        "corrected_text": "Hello, my heart. I have inquired the saloon proprietor for an appropriate lunch to serve you.${{e0}}#$b#She suggested her 'dish of the day'. I hope it suits your tastes.[214 231 202 208 237]${{e1}}",
+        "last_updated": "2024-05-05T18:02:48.171617"
+    },
+    "Married.Wizard.Neutral_5_4": {
+        "original_hash": "ab9ace6d5a52646d199eeecf4960be33ae12a730df56f45e36f9f92addb50bca",
+        "status": "accepted",
+        "corrected_text": "While I may not be of much assistance in cooking, please leave the dishes and other such cleaning tasks to me, my heart.${{e1}}#$e# It may seem a bit odd for a Witch to volunteer to clean, but I assure you, I am very proficient at it.${{e9}}#$b#...The tower would have long been reduced to a disaster zone if I were not.${{e3}}",
+        "last_updated": "2024-05-05T18:02:52.149532"
+    },
+    "Married.Wizard.Neutral_5_6": {
+        "original_hash": "87d4f10b96fe7367d6d7c1ca6d49538fa59e1e8d54a4b38dab2ae9186419ed67",
+        "status": "to_review",
+        "corrected_text": "I am quite fascinated with the depiction of wizards in modern media.${{e0}}#$b#Why do they solely fall either in 'beautiful young witch' or 'elderly woman with a long beard'?${{e3}}#$b#Where is the Witch who has decided to become a talking bat for the season?${{e5}}#$b#Where is the witch who is obsessed with theming her every aspect of her appearance on the current season?${{e5}}#$e#I suppose it is probably for the best that the mundane world is ignorant of the magic world's oddity.${{e3}}#$e#...What do you mean I shouldn't be one to talk?${{e7}}",
+        "last_updated": "2024-05-05T18:03:42.206048"
+    },
+    "Married.Wizard.Neutral_7_7": {
+        "original_hash": "aeaf5ffbf121745c4cc5b3c7630e5aff6cf699dd6e2686bc1e4acb7bbfbfdd7e",
+        "status": "accepted",
+        "corrected_text": "Do you ever have the urge to ponder an orb?${{e3}}#$e#Perhaps, it is a witch thing.${{e0}}",
+        "last_updated": "2024-05-05T18:04:07.754069"
+    },
+    "Married.Wizard.Neutral_9_5": {
+        "original_hash": "d730fb716168e0a3e81f91d8ac69d68b6266d6dc44b4a7ae62ebb22b3a195c41",
+        "status": "accepted",
+        "corrected_text": "I cannot claim to be the greatest wife, but please do not hesitate to tell me if there is somewhere I am able to improve upon, my heart.${{e3}}#$b#Even should I fail, I will never stop making an effort.${{e5}}#$e#....Yes, that includes mastering cooking.${{e3}}#$e#......I should be able to limit any potential fire damage with spells in the least.${{e2}}",
+        "last_updated": "2024-05-05T18:04:10.836208"
+    },
+    "Married.Wizard.Bad_4_3.4": {
+        "original_hash": "735157385172321c40c9b99d89b13fe21f27720008dcb40fcf7d5e175154d085",
+        "status": "accepted",
+        "corrected_text": "Rasmodia doesn't look so good... ",
+        "last_updated": "2024-05-05T18:04:12.543523"
+    },
+    "Married.Wizard.Funleave_11": {
+        "original_hash": "5cbbd80b8b0b065f26cd7e3bba031337e4279fe5b3869021cad1576a1963b704",
+        "status": "to_review",
+        "corrected_text": "I must return to my tower today in the name of Order business.${{e3}}#$b#Considering my many years of partnership with Marlon, I often accept commissions she introduces even if they are mainly comprised of simple enchantments.${{e0}}#$e#I would offer to enchant your weapons as well, my heart, but you've already surpassed what I'm casually capable of with that old dwarven forge atop the Ginger Island volcano.${{e9}}#$b#Anything greater would take far more than mere weeks of effort.${{e3}}",
+        "last_updated": "2024-05-05T18:04:17.570018"
+    },
+    "Married.Wizard.Funleave_17": {
+        "original_hash": "deb839aafc7bebec7fa95c1e6fe89581c616a1239a4aa77a6cf07da9c9878da3",
+        "status": "to_review",
+        "corrected_text": "Ngh... @...${{e6}}#$b#The sinful things you do to me every night!${{e8}}#$b#A lesser woman would no doubt be seduced into staying in bed with you all day.${{e4}}#$b#Unfortunately, the ever responsible Rasmodia Rasmodia must return to her tower for the day, yet.${{e2}}#$e#Let us resume once I return home in the evening.${{e4}}",
+        "last_updated": "2024-05-05T18:04:28.393798"
+    },
+    "Married.Wizard.Funleave_31": {
+        "original_hash": "57644d6f6e01c666a60e1ca116e04105757313c27c593cd100ff7e2e384ad257",
+        "status": "accepted",
+        "corrected_text": "Ah, my heart. Good morning.${{e6}}#$b#I shall be departing for the tower in but a few moments, but please allow me to kiss you goodbye first.${{e4}}#$b#I have heard it is quite a common practice in this era, after all.${{e6}}#$e#%Rasmodia pulled me close before planting a deep kiss on my lips...#$b#I shall see you in the evening, my love.${{e6}}",
+        "last_updated": "2024-05-05T18:04:39.828588"
+    },
+    "Married.Wizard.Funleave_33": {
+        "original_hash": "13a3bea9cf30cfa96bc7073ed709311765e60fb75c0ecf4f5f89466cbffa2bf0",
+        "status": "accepted",
+        "corrected_text": "Ah, beloved, you are finally awake.${{e9}}#$b#May I please hold you for a moment?${{e6}}#$e#%Rasmodia wraps her arms around me and presses me close before heaving a heavy sigh.#$b#...I doubt that will last me through the entire day away from you, but it is something.${{e3}}#$b#I shall see you again in the evening, my love.${{e6}}",
+        "last_updated": "2024-05-05T18:04:43.604979"
+    },
+    "Married.Wizard.Funleave_34": {
+        "original_hash": "25002e6012890375f46a6111a5c2524599be075f9b8faf9607f3da07e99a0dff",
+        "status": "accepted",
+        "corrected_text": "Hmm? ${{e7}}#$b#%I reach up to cup Rasmodia's face, holding her still as I pull in for a quick goodbye kiss.#$b#Ah, beloved! ${{e8}}#$b#Even if it was meant to be a goodbye kiss, how do you expect me to leave the house after a display like that?${{e5}}#$b#Come here.${{e6}}#$b#%...Rasmodia planted kisses all over my face.#$b#Much better.${{e6}}#$e#Let us resume after I return, my heart.${{e4}}",
+        "last_updated": "2024-05-05T18:04:54.188933"
+    },
+    "Married.Wizard.Funleave_35": {
+        "original_hash": "e01122c12a4f9dab5d2cb3e0042458ef24100942503cd58340525d813430cf6e",
+        "status": "accepted",
+        "corrected_text": "Please come here for a moment, my heart. I wish to sate myself with your warmth before I am forced to depart for the day.${{e3}}#$b#Yes, I realize I am being very dramatic right for what is only a few hours apart, but I cannot help my constant longing for you, my love.${{e2}}#$e#%I give Rasmodia a tight hug and a few pats on the back.#$b#...I suppose that will have to do.${{e3}}#$b#Until we meet again, beloved.${{e6}}",
+        "last_updated": "2024-05-05T18:04:56.090312"
+    },
+    "Married.Wizard.Funleave_37": {
+        "original_hash": "863c6f89799221bec7bed898012cacdc457c7207bab01c68cfb22649aa748d7a",
+        "status": "accepted",
+        "corrected_text": "Sometimes on mornings where I must leave for the tower like this, I am filled with an inexplicable sense of dread.${{e3}}#$b#What if your day runs particularly late?${{e2}}#$b# What if my day runs particularly late?${{e5}}#$b#What if something happens and I am too distracted with work to assist you in time?${{e2}}#$e#Logically, I realize that all will likely be well, but sometimes I am plagued but such thoughts all the same.${{e3}}#$b#Please forgive your wife for being very clingy.${{e2}}",
+        "last_updated": "2024-05-05T18:04:58.824709"
+    },
+    "Married.Wizard.Funleave_47": {
+        "original_hash": "b4c31ad30ef580c1ee12aa18a30d15a94dd04bd7c43023ad0de9c99feed006b6",
+        "status": "accepted",
+        "corrected_text": "...May I have one last hug before I depart for the tower?${{e2}}#$b#%...Rasmodia and I shared a hug for a solid few minutes before finally letting go.#$b#Handful of hours or not, I shall miss you dearly, my heart.${{e2}}",
+        "last_updated": "2024-05-05T18:05:09.317618"
+    },
+    "Married.Wizard.Funleave_57": {
+        "original_hash": "ecf8a8197d4720f6edbfb52d4b19ef14894ee75122c5782341456d4769a6c672",
+        "status": "accepted",
+        "corrected_text": "Ah, good morning, my heart. I am due to return to the tower once more....${{e2}}#$b#%I reach out and give Rasmodia a kiss on her frowning lips.#$b#Ah! ${{e8}}#$b#...Yes, you are correct. I will be back in the evening.${{e6}}#$b#I shall see you then, my love.${{e4}}",
+        "last_updated": "2024-05-05T18:05:12.092427"
+    },
+    "Married.Wizard.Funleave_62": {
+        "original_hash": "e147a9ab09d38f8bde663332d801afa67d8b0b55838c694da8f522868eb6aeba",
+        "status": "accepted",
+        "corrected_text": "Ah, @. There is no need to make breakfast for me as I shall be leaving in a few moments.${{e3}}#$b#...I would, however, accept a kiss to tide me over if you are willing.${{e4}}#$e#%Rasmodia and I shared a kiss...#$b#Thank you, my love.${{e4}}#$b#I shall see you in the evening.${{e6}}",
+        "last_updated": "2024-05-05T18:05:32.737304"
+    },
+    "Married.Wizard.Funleave_65": {
+        "original_hash": "3bd5f3bb5b11e8955823dadb679efea4b0c8798920719084ab05301e250304a1",
+        "status": "accepted",
+        "corrected_text": "...I shall be departing for the tower in but a few moments, my heart.${{e3}}#$b#There is still time for a few small gestures of affection, however.${{e4}}#$b#%Rasmodia cupped my cheeks and kissed me all over my face before planting a final one on my lips....#$b#*Chuckles* That flush looks wonderful on you, my heart.${{e6}}#$b#Until I return to your embrace once more.${{e4}}",
+        "last_updated": "2024-05-05T18:05:34.160807"
+    },
+    "Married.Wizard.Funleave_67": {
+        "original_hash": "41dfb0c9e2ac62493fca5b0a55da373c86ae8abe85ccaec5c5e5437c9112d3ab",
+        "status": "accepted",
+        "corrected_text": "My many centuries have turned the tower into a very convenient hub for my activities.${{e3}}#$b#Yet I have never been as irritated with its existence as I am the days I must return to its halls.${{e5}}#$b#Perhaps I should simply merge it with the farmhouse and be done with it.${{e11}}#$e#%Rasmodia heaves a heavy sigh.#$b#Merely words spoken in frustration, my heart.${{e3}}#$b#You and I both know I shall never speak to another villager again if I did not have the excuse of walking through town or reserving the side room at the saloon.${{e3}}",
+        "last_updated": "2024-05-05T18:05:35.955554"
     }
 }
