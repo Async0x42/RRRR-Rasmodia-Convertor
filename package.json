@@ -1,0 +1,35 @@
+{
+  "name": "rrrr-rasmodia-convertor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Async0x42/RRRR-Rasmodia-Convertor.git"
+  },
+  "keywords": [
+    "stardew",
+    "rasmodia",
+    "rasmodius",
+    "magnus"
+  ],
+  "author": "Async0x42",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Async0x42/RRRR-Rasmodia-Convertor/issues"
+  },
+  "homepage": "https://github.com/Async0x42/RRRR-Rasmodia-Convertor#readme",
+  "dependencies": {
+    "csv-parse": "^5.5.5",
+    "json5": "^2.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/json5": "^2.2.0"
+  }
+}
