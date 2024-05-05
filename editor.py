@@ -140,6 +140,19 @@ def find_first_unconfirmed(diffs, corrections):
             return i
     return -1  # Return -1 if no unconfirmed or to_review diffs found
 
+def find_next_actionable_index(diffs, corrections, current_index):
+    """Find the next index with unconfirmed or flagged for review status, or hash mismatch."""
+    # Start searching from the next index
+    start_index = current_index + 1
+    num_diffs = len(diffs)
+    for i in range(start_index, start_index + num_diffs):  # Wrap around if needed
+        idx = i % num_diffs
+        key, o_text, p_text, corrected, hash_match = diffs[idx]
+        status = corrections.get(key, {}).get('status', 'unconfirmed')
+        if status in ['unconfirmed', 'to_review'] or not hash_match:
+            return idx
+    return -1  # Return -1 if no actionable diff found
+
 def setup_console(diffs, corrections):
     """Manage the console UI and save changes."""
     console = Console()
@@ -184,6 +197,12 @@ def setup_console(diffs, corrections):
                         'last_updated': datetime.datetime.now().isoformat()
                     }
                 console.print(f"[bold yellow]Flagged '{key}' for review.[/bold yellow]")
+            elif choice == 'ff':  # Fast-forward command
+                next_index = find_next_actionable_index(diffs, corrections, index)
+                if next_index != -1:
+                    index = next_index
+                else:
+                    console.print("[bold red]No more items to fast-forward to.[/bold red]")
             elif choice == 'k':  # Assume 'k' is the chosen key for toggling skip
                 if key in corrections:
                     if corrections[key].get('status') == 'skipped':
