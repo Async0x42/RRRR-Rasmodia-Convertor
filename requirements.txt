@@ -1,0 +1,3 @@
+json5
+prompt-toolkit
+rich
