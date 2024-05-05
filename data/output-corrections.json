@@ -1,0 +1,656 @@
+{
+    "config.section.Appearance.description": {
+        "original_hash": "0eeda89b9ff85f7840a720f645e39e3647a8f9836de0fc72afae591eb6cb0d58",
+        "status": "accepted",
+        "corrected_text": "Adjust how visuals regarding the Witch are handled. Largely used for compatibility when using custom assets.",
+        "last_updated": "2024-05-05T12:11:14.222142"
+    },
+    "config.section.Babies.description": {
+        "original_hash": "354319f76b449c40af0fc24c7dfc23ad6b4a08d8394f3625f8e6dc46eee2aaf7",
+        "status": "accepted",
+        "corrected_text": "Alters the appearance of the Rasmodia's children, including whether or not my sprites are used at all.",
+        "last_updated": "2024-05-05T12:11:27.621373"
+    },
+    "config.Hidden Love Interest Mode.description": {
+        "original_hash": "518c094807994b9512b19ea5181e4d17cf91707b2551b75b2f245233eb908e32",
+        "status": "accepted",
+        "corrected_text": "The intended experience. Makes marrying the Witch impossible until conditions are met. Please reference the mod page for details. Adds additional events and in-world context to events.\t*Important* TOGGLING THIS IN THE MIDDLE OF A PLAYTHROUGH MAY CAUSE BUGS AND PREVENT SOME EVENTS FROM TRIGGERING.",
+        "last_updated": "2024-05-05T12:11:32.444274"
+    },
+    "config.Override Generic Dialogue.description": {
+        "original_hash": "2ded534480b10de1fd543c86a9d6910a07de2f8b975f0cd0b9d9dfbeff917d6e",
+        "status": "accepted",
+        "corrected_text": "Overrides generic universal dialogue. Still alters certain dialogue like Welwick's predictions and other similar fun dialogue. Please disable this if you aren't planning to date the Witch. ",
+        "last_updated": "2024-05-05T12:11:34.218522"
+    },
+    "config.Sprite": {
+        "original_hash": "26a3bb76ab4dd42f17a452d3e3dc8fee2db6ba1a8127087e9d333b78f6755c52",
+        "status": "accepted",
+        "corrected_text": "Witch Sprite",
+        "last_updated": "2024-05-05T12:11:35.544894"
+    },
+    "config.Sprite.description": {
+        "original_hash": "5f6d7e566695a0fd705a6b4ec1633a90d43e1bb3d64d564dfea89d731825fedd",
+        "status": "accepted",
+        "corrected_text": "Please leave this on 'Use included' if you would like to use the included sprite that matches the portrait. If you have a custom Witch sprite you would like to use, change this to 'Use custom' and install the sprite based on the mod maker's instructions.",
+        "last_updated": "2024-05-05T12:11:38.866135"
+    },
+    "config.Wizard Babies": {
+        "original_hash": "404e3da004b42df3eef0329b5dad7e7c4b21a0ae3a536aacc218074d604854d1",
+        "status": "accepted",
+        "corrected_text": "Witch Babies",
+        "last_updated": "2024-05-05T12:11:42.235026"
+    },
+    "config.Wizard Babies.description": {
+        "original_hash": "c1fc9665b2fb2af69f7acb94eca56abf320a5eb0b9c76c4d599ef23cfae2fe16",
+        "status": "accepted",
+        "corrected_text": "Turn this on if you would like the included witch baby sprites. Only really makes sense for biological children. For adopted children, I would suggest turning this off.",
+        "last_updated": "2024-05-05T12:11:45.311657"
+    },
+    "config.Wizard Baby Hair Strip": {
+        "original_hash": "4f7879fcf5b3acc0b98ed037861b8a574cca4d699e0d0433b05e937a2341cabd",
+        "status": "accepted",
+        "corrected_text": "Witch Baby Hair Strip",
+        "last_updated": "2024-05-05T12:11:46.867318"
+    },
+    "config.Wizard Baby Hair Strip.description": {
+        "original_hash": "3e3bbf81ce6383d861cd9c3e650b9fd325c50e5876db08150b1470f02d5d7f7f",
+        "status": "accepted",
+        "corrected_text": "Changes the strip of differently coloured hair the witch babies have. Should match the farmer's natural hair colour. Does nothing if Witch Babies isn't enabled.",
+        "last_updated": "2024-05-05T12:11:48.414470"
+    },
+    "config.Wizard Baby Eye Colour": {
+        "original_hash": "c3efd2b9643af9b16310b6082d25bed15d2816dd64a4afb8cd1bb14d9cec7b55",
+        "status": "accepted",
+        "corrected_text": "Witch Baby Eye Colour",
+        "last_updated": "2024-05-05T12:11:49.734509"
+    },
+    "config.Wizard Baby Eye Colour.description": {
+        "original_hash": "4df9b4af85d1c7c1f9e6b4a7d0b68143dfaa3fd66e7541950a0fc4601f9ece3d",
+        "status": "accepted",
+        "corrected_text": "Changes the colour of the female child's eyes. Should match the farmer's natural eye colour. Does nothing if Witch Babies isn't enabled.",
+        "last_updated": "2024-05-05T12:11:52.356490"
+    },
+    "config.Wizard Age Appearance": {
+        "original_hash": "d0116f88cb795f8cf73a71dfb726cff81a0ab4cb0e205883f9f6430c6e62026d",
+        "status": "accepted",
+        "corrected_text": "Witch Age Appearance",
+        "last_updated": "2024-05-05T12:11:53.089762"
+    },
+    "config.Wizard Age Appearance.description": {
+        "original_hash": "eb4bb30946864ffe58475403e5b4e80d3a342d9d2aa7c74d58af7b028bc11e1d",
+        "status": "accepted",
+        "corrected_text": "Changes some dialogue that refers to the Witch's appearance. She will still be very old.",
+        "last_updated": "2024-05-05T12:11:57.483593"
+    },
+    "config.Earring Colour.description": {
+        "original_hash": "3d4c27a7d7860397a7b01663ff53d786f6370ae0c3dba32b78451604d82ada4f",
+        "status": "accepted",
+        "corrected_text": "Changes the colour of Rasmodia's eventual earring gift in the event. Please pick which suit you better. To actually wear them in game, please install the Fashion sense pack.",
+        "last_updated": "2024-05-05T12:12:05.278801"
+    },
+    "config.Date Ask Percent Chance.description": {
+        "original_hash": "d42841929cda51110fa2caffd092e88de7acbf691cd8e3663506f50a144a6172",
+        "status": "accepted",
+        "corrected_text": "Configure the chance Rasmodia will ask you to go on a date upon leaving the farmhouse each day after marriage. Default is 25%, but can be any percent 0-100. Set to 0 to disable the date event.",
+        "last_updated": "2024-05-05T12:15:10.042282"
+    },
+    "config.Min Hearts Required.description": {
+        "original_hash": "cca06f1657b67da1394a87f91373c280259037ce4ede08e89aeb344202a3a24b",
+        "status": "accepted",
+        "corrected_text": "Change the minimum number of hearts required with Rasmodia for her to ask you on a date. Default is 10 hearts.",
+        "last_updated": "2024-05-05T12:15:15.122555"
+    },
+    "config.Friendship Bonus.description": {
+        "original_hash": "5af154313485a0d8f5a2660d37d9c4edaaac849263caaf58428100b3c4dc6ffb",
+        "status": "accepted",
+        "corrected_text": "Change the amount of friendship received with Rasmodia if you go on a date with her. 'none' will disable any friendship bonuses, 'small' will increase friendship by 25 points (1/10 of a heart), 'medium' increases by 50 points (2/10 of a heart), and large increases by 100 points (4/10 of a heart).",
+        "last_updated": "2024-05-05T12:15:20.358796"
+    },
+    "config.Darker Plot Events(Y4).description": {
+        "original_hash": "bd95fab48696493156aa5bb5324a36e8ba0b205a422e39f033c85c40ebe90360",
+        "status": "accepted",
+        "corrected_text": "Enables the somewhat darker string of critical plot events where Rasmodia's trauma response is on full display. If you would prefer a more light-hearted experience I suggest you turn this off. TW: Overt self-destructive tendencies and vague suicidal tendency implications. Potentially may possess triggering scenarios. (The farmer is briefly kidnapped and sealed into silence about the event.) Toggling this off in the middle of said events will stop them from continuing so you may test it out to see if it's for you.",
+        "last_updated": "2024-05-05T12:15:30.190422"
+    },
+    "MagnusPortrait": {
+        "original_hash": "ab8aa44d627c0775c65a8c03a932b227056203d363582d5fd3bffb48c1e5654d",
+        "status": "accepted",
+        "corrected_text": "Rasmodia's Portrait",
+        "last_updated": "2024-05-05T12:15:38.347944"
+    },
+    "object.HairStylingKit.description": {
+        "original_hash": "f8d6995f90ec2438b119a1d3656702d431ca694668f02281a98755abd17e5b59",
+        "status": "accepted",
+        "corrected_text": "A small kit that includes combs, clips, ribbons, hair strings, and a pair of scissors. I should show this to Rasmodia while we're both at home if I want to style her hair.",
+        "last_updated": "2024-05-05T12:15:43.529400"
+    },
+    "object.ClothingTicket.description": {
+        "original_hash": "5bb16c7d7720c6697fafdbe700f94961a9cbd4ebf9906c5412d69f5cf55ca138",
+        "status": "accepted",
+        "corrected_text": "A small heart shaped note that promises to pay for an 'outfit change' in 'hugs and kisses'. I should show this to Rasmodia while we're both at home if I want to change the way she dresses.",
+        "last_updated": "2024-05-05T12:15:47.476034"
+    },
+    "object.RazzyWine.name": {
+        "original_hash": "2c833e30214ad2ddfc5252ff54b90678d533aed4ca03e9a70faf934e20ac378f",
+        "status": "accepted",
+        "corrected_text": "Rasmodia's 'Wine'",
+        "last_updated": "2024-05-05T12:15:55.197823"
+    },
+    "object.RazzyWine.WineNew.description": {
+        "original_hash": "a555cda1bc6dd9df28815b2cedd7ff4d96c0ed1cf5f5e5d27c00521fdd65eda3",
+        "status": "accepted",
+        "corrected_text": "Wha? Rasmodia hasn't even started making wine yet! ...Did you pull this from the future, somehow?",
+        "last_updated": "2024-05-05T12:16:20.173416"
+    },
+    "object.RazzyWine.WineWorking.description": {
+        "original_hash": "df6dca6cd5febbd7b957ad375f84ac00435b176ce0f7f7eb3cb0dcec4581be0b",
+        "status": "accepted",
+        "corrected_text": "...Rasmodia is supposed to be still working on this... How did you get it?",
+        "last_updated": "2024-05-05T12:16:30.100688"
+    },
+    "object.RazzyWine.WineDone.description": {
+        "original_hash": "373e5eb4bf3ed33d6a73b4b6a65d3151320aaab4fcf0cf528997d2ed52a1db6d",
+        "status": "accepted",
+        "corrected_text": "I can feel the sincere feelings Rasmodia put into brewing this 'wine' for me, but it's really more like a potent potion than anything.... Maybe we can share it when we're both home in the evening.",
+        "last_updated": "2024-05-05T12:16:31.507848"
+    },
+    "object.RazzyWine.WineSampled.description": {
+        "original_hash": "1c9cc0221130de20a83bf29bb5c3248a2758bde7653b7e8ce769986712cb66d9",
+        "status": "accepted",
+        "corrected_text": "A potent, delicious wine (potion) filled with Rasmodia's sincere feelings. Sharing a bottle together while settled in for the evening is always a nice time.",
+        "last_updated": "2024-05-05T12:16:40.982057"
+    },
+    "Premarriage.Wizard.A.NightMarket.2": {
+        "original_hash": "0ed7100a079dd70a8258c195ea1a2ed5c3ad09179903dfa5a762a1a663d90e95",
+        "status": "accepted",
+        "corrected_text": "Rasmodia sighs.",
+        "last_updated": "2024-05-05T12:16:41.781315"
+    },
+    "Premarriage.Wizard.A.NightMarket.5": {
+        "original_hash": "e68de2ed53ceccea9e3f54ee5a8a380d2879e7892af60475a11519ae390fe6d9",
+        "status": "accepted",
+        "corrected_text": "I held on to Rasmodia's hand.",
+        "last_updated": "2024-05-05T12:16:47.780922"
+    },
+    "Premarriage.Wizard.Spring_Tue4.1": {
+        "original_hash": "ebd1f2ac4d2b7060fbc48e9c85622d529fc5b89f489c22e464a2876a83cac113",
+        "status": "to_review",
+        "corrected_text": "I got the Shrine of Illusion from a woman who wanted it gone. She reached out to me, begging me to take it.",
+        "last_updated": "2024-05-05T12:20:54.222325"
+    },
+    "Premarriage.Wizard.Spring_Tue4.2": {
+        "original_hash": "73c5120cd216526476767a3ef808c3caa4b1a386d0d2ca21a295625418cefc3d",
+        "status": "to_review",
+        "corrected_text": "Getting it here was difficult, but she was glad to be rid of it. It had taken more than just her face.",
+        "last_updated": "2024-05-05T12:23:02.472425"
+    },
+    "Premarriage.Wizard.Spring_Fri6.3": {
+        "original_hash": "5b3737134c31083b8a5c527b93ae1eaab153fb74908f63da1fb9a9b0ea12b09f",
+        "status": "accepted",
+        "corrected_text": "Sorry to bore you with this old woman's woes.",
+        "last_updated": "2024-05-05T12:23:08.014301"
+    },
+    "Premarriage.Wizard.Summer_Wed.2": {
+        "original_hash": "77ba40ae2df70e4f833d7557e3ae0d8dcc795c8630cea79262dbd79bf6a8e06e",
+        "status": "skipped",
+        "corrected_text": "Melon of the Mother, Melon of the Mother, Melon of the Daughter, Melon of the Daughter.",
+        "last_updated": "2024-05-05T12:23:13.767003"
+    },
+    "Premarriage.Wizard.Summer_Tue4.1": {
+        "original_hash": "fae7e8f770d9c236f3bfe06c65287daf3585bff3dd7ae415545aa06844f88229",
+        "status": "to_review",
+        "corrected_text": "The previous owner of the Shrine of Illusion was a vain woman, trying to find the perfect look for herself. She was wealthy, and won the shrine in a contest.",
+        "last_updated": "2024-05-05T13:12:30.407296"
+    },
+    "Premarriage.Wizard.Summer_Tue4.2": {
+        "original_hash": "2f92c2a5c2fdde7dfa9384784272f9068f34b73cd3d9698c778f0157503a50eb",
+        "status": "to_review",
+        "corrected_text": "She invested all her wealth into it, trying to find the perfect look, but she was never happy.",
+        "last_updated": "2024-05-05T13:12:33.857508"
+    },
+    "Premarriage.Wizard.Summer_Tue4.3": {
+        "original_hash": "8fda64f8d6f776786333e61b95ff29d8387d3463c02f62180f74ba6242910c30",
+        "status": "to_review",
+        "corrected_text": "She was trying to fix what was on the outside and not the inside, and it consumed her.",
+        "last_updated": "2024-05-05T13:12:36.557700"
+    },
+    "Premarriage.Wizard.Fall_Sun6.1": {
+        "original_hash": "99fec0121bf2788ce0c7da431e80f5897ee26f50099d13952170b871de65cde1",
+        "status": "to_review",
+        "corrected_text": "The shadow brutes, have you seen them? Though many are monsters, there is one out there who isn't. Have you met her?",
+        "last_updated": "2024-05-05T13:12:39.170489"
+    },
+    "Premarriage.Wizard.Fall_Sun6.2": {
+        "original_hash": "6feffe4b124ea327d9418e9cbf370c8fc88c696ff44de6c24bd2a0cfa2da526b",
+        "status": "to_review",
+        "corrected_text": "I have known of her for a long time. I hope she remains friendly.",
+        "last_updated": "2024-05-05T13:12:59.714395"
+    },
+    "Premarriage.Wizard.Winter_Tue4.2": {
+        "original_hash": "9451817f1ea2dc5bbc69237a97968c05d5c3b9a1437f4213a635ff82b3b935a0",
+        "status": "to_review",
+        "corrected_text": "The stone granted her this power and she turned into a hawk and flew away. When the girl's mother found out, she raged.",
+        "last_updated": "2024-05-05T13:13:05.786949"
+    },
+    "Premarriage.Wizard.Winter_Tue4.3": {
+        "original_hash": "d60cfc4069335b9ac6e5a6738201d24b3af4de2e20a07624d61f119c7e0e6eef",
+        "status": "to_review",
+        "corrected_text": "She then threw the rock into a lake, to be forgotten forever.",
+        "last_updated": "2024-05-05T13:13:10.161014"
+    },
+    "Premarriage.Wizard.Winter_Wed4.3": {
+        "original_hash": "a661f20b27425eff33ad0657c872ec2c767697d81562de18fb41404a78bab1a4",
+        "status": "to_review",
+        "corrected_text": "To get revenge, the shrine turned the girl into a bear and she scared her mother.",
+        "last_updated": "2024-05-05T13:13:20.564535"
+    },
+    "Premarriage.Wizard.Winter_Thu4.1": {
+        "original_hash": "66d61e54de11b26acd9135f9df9399a76796149aec28bde773b6ad72969e29af",
+        "status": "to_review",
+        "corrected_text": "The Mother, realizing what she'd done, pulled the Shrine out of the Lake and begged for forgiveness. The girl flew away, but the Shrine demanded it be taken to the king.",
+        "last_updated": "2024-05-05T13:13:26.854958"
+    },
+    "Premarriage.Wizard.Winter_Sun4.2": {
+        "original_hash": "83e86af1b91da4fb89515c152b8531bf88c89294ea492c24d4faa038524056f9",
+        "status": "skipped",
+        "corrected_text": "There once was a frog who wished to be human and it asked the Shrine for such a wish.$0#$b#The Shrine granted her her desire, but demanded gold. The frog had no gold, so as a human, she stole some. The frog was then thrown in jail and that's where she died.",
+        "last_updated": "2024-05-05T13:13:36.723486"
+    },
+    "Premarriage.Wizard.Winter_Sat8.1": {
+        "original_hash": "41d413004f3055fccbae93ee31e4523eb582780df2be89ea068c55258125c9c7",
+        "status": "skipped",
+        "corrected_text": "I've read a novel in which a woman gets smarter, but her body disappears until she's nothing less than a husk.",
+        "last_updated": "2024-05-05T13:13:46.164082"
+    },
+    "Premarriage.Wizard.Winter_Sat10.2": {
+        "original_hash": "5fb33d2437cdfa75280021e44fa1fa9777869f14ebe664c1d2f24d8b7e4a56c2",
+        "status": "accepted",
+        "corrected_text": "I would not wish for you to isolate yourself for the sake of visiting an old witch in a tower.",
+        "last_updated": "2024-05-05T13:13:52.023758"
+    },
+    "Dumped.Wizard.Alt": {
+        "original_hash": "f78c1f1633bd73acee120e17997fbdc74ece0d816ea636aad533c3b8f0b77dd4",
+        "status": "accepted",
+        "corrected_text": "...Ah, @...${{e2}}#$b#...${{e2}}#$b#...Forgive me. I am in need of some time alone.${{e3}}#$e#...Please. Even if we cannot be a couple, I do not want to show you such an ugly side of myself.${{e29}}#$e#%Rasmodia refuses to meet my eyes.",
+        "last_updated": "2024-05-05T13:14:03.112349"
+    },
+    "Dating.Wizard.Summer_Mon3.7": {
+        "original_hash": "798168bce70e7a7efe3769c7f9c77fbf92600ba02891d5238c9b5a7f97c80d48",
+        "status": "accepted",
+        "corrected_text": "As the Witch of the valley, it is my duty to ensure it be handled with caution, especially now that ones such as yourself explore the depths in search of ore and minerals.",
+        "last_updated": "2024-05-05T13:14:05.431515"
+    },
+    "Dating.Wizard.NoInt.Summer_Sun5.5": {
+        "original_hash": "ffe7fb33e1d5b15895b6c75edee456c92f38bab5f29b4c4471dd80e284de0a8f",
+        "status": "accepted",
+        "corrected_text": "%I inch a little closer to Rasmodia.",
+        "last_updated": "2024-05-05T13:14:07.140842"
+    },
+    "Dating.Wizard.NoInt.Summer_Sun5.7": {
+        "original_hash": "01f9c074edbe32dc4a4fe816db4aa7f783a0e58e17547622463a416bd14f498d",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia suddenly jumped back...",
+        "last_updated": "2024-05-05T13:14:12.157573"
+    },
+    "Dating.Wizard.Int.Summer_Sun5.5": {
+        "original_hash": "f4fde7689e59d69ff7ff6e688bfcc00eb8a1092e1a02fd307b66c32b052e8bf6",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia wrapped me in her cloak...",
+        "last_updated": "2024-05-05T13:14:14.765926"
+    },
+    "Dating.Wizard.Summer_25.5": {
+        "original_hash": "2ed296d9edf872ae749de054043b5b9c82ebafcbfc27e1ebac3f18e6368485e6",
+        "status": "accepted",
+        "corrected_text": "You have granted a very old witch some rare happiness in her long life.",
+        "last_updated": "2024-05-05T13:14:17.074332"
+    },
+    "Dating.Wizard.Fall_Wed2.4": {
+        "original_hash": "9b5d0399d78a95547aee5c22ede6b3ddb01f605a7d51c88bc1e8b83db76a687a",
+        "status": "accepted",
+        "corrected_text": "As a witch, however, I spend most of the season both wary of the coming winter and exhausted by my duties as my powers begin to wane.",
+        "last_updated": "2024-05-05T13:14:18.876906"
+    },
+    "Dating.Wizard.Fall_Sat2.3": {
+        "original_hash": "317c4166505c358bf1c7cc4e11b027f6010c85d357894b757b97c9bee03289c1",
+        "status": "accepted",
+        "corrected_text": "You hold a very dear position in this old witch's heart, @. Thank you for choosing me.",
+        "last_updated": "2024-05-05T13:14:21.684553"
+    },
+    "Dating.Wizard.Q.Wife.5": {
+        "original_hash": "7bfc2acea0753abe53595c5e30df75acf57ced94d49daec706e2943837eb0ff3",
+        "status": "accepted",
+        "corrected_text": "Of course, I won't subject you to an old woman's morose ramblings about lost love without permission.",
+        "last_updated": "2024-05-05T13:14:26.620344"
+    },
+    "Dating.Wizard.A.Wife.17": {
+        "original_hash": "969d33a9f75576abe6fe106b0847bf3736b57e5d3138eceddb0ef47964a5c01a",
+        "status": "accepted",
+        "corrected_text": "May those be the sole nuggets of wisdom you take from this sad old woman's ramblings.",
+        "last_updated": "2024-05-05T13:14:29.361107"
+    },
+    "Dating.Wizard.Winter_5.11": {
+        "original_hash": "b55bd4279a00c7377f2ca5fff2a80418dac00c77772d3f77439a1dcd6b987f63",
+        "status": "to_review",
+        "corrected_text": "It is an evil version, where all my desires were realized and have driven her mad. She tries to get out and each night, I stop her.",
+        "last_updated": "2024-05-05T13:14:41.448965"
+    },
+    "Dating.Wizard.Winter_5.13": {
+        "original_hash": "60a8646dfdd9a9f2959f523dbd537e861628a924b0504c7aafd5a181c62cbfe0",
+        "status": "to_review",
+        "corrected_text": "Only in your presence does the ache seem to soothe, yet I must resist my need to cling to you like a woman lost at sea.",
+        "last_updated": "2024-05-05T13:14:52.299646"
+    },
+    "Dating.Wizard.Winter_5.14": {
+        "original_hash": "c380a98ebfb81380509fcbce318f53d74fe578b01b052fd2942aee78d87bbf4a",
+        "status": "to_review",
+        "corrected_text": "You are a beautiful person, @. I do not wish to chain you to myself as a crutch for me to keep walking this path like that woman in my dreams.",
+        "last_updated": "2024-05-05T13:14:59.234093"
+    },
+    "Dating.Wizard.Winter_6.6": {
+        "original_hash": "8f121311183e3068057d39dc209affa83aa8e0867e5dee8df1f3b15c26735953",
+        "status": "to_review",
+        "corrected_text": "My master took pity after hearing my story, found my potential adequate for passing on her specialty as her last act in this world and... here we are.",
+        "last_updated": "2024-05-05T13:15:07.187567"
+    },
+    "Dating.Wizard.Winter_14.1": {
+        "original_hash": "c61367e3126199271e3d94d0fad88e2febc3c6fa48e0fb0437c3a8de155bb727",
+        "status": "accepted",
+        "corrected_text": "Hmm? How long is a witch's lifespan?",
+        "last_updated": "2024-05-05T13:15:11.865857"
+    },
+    "Dating.Wizard.Winter_14.16": {
+        "original_hash": "efb3b0ee5df778668bfa03efae0027cb28241debe2b0e7408c02ba3abfa99a0f",
+        "status": "accepted",
+        "corrected_text": "Does that mean I'm a particularly powerful witch?",
+        "last_updated": "2024-05-05T13:15:14.805097"
+    },
+    "Dating.Wizard.Winter_15.5": {
+        "original_hash": "41b03eb566efb088a4061620eeac46289e271984a98a560a85eb0919bad95c7d",
+        "status": "to_review",
+        "corrected_text": "Yes, Rasmodia Rasmodia is not, in fact, my real name.",
+        "last_updated": "2024-05-05T13:15:24.198582"
+    },
+    "Dating.Wizard.Winter_15.7": {
+        "original_hash": "da6a9948cbeed8c7218eccf4008180ce5f845f4697bbd98d5ab3bfcfb679ae93",
+        "status": "accepted",
+        "corrected_text": "What is it, do you not like Rasmodia? Weren't you planning on taking it?",
+        "last_updated": "2024-05-05T13:15:39.156328"
+    },
+    "Dating.Wizard.Winter_Mon1.2": {
+        "original_hash": "fc0c1d34dfe0d0350511fa2d23e2bbc8410e9e3dcce1cf0065f1f99bffe9c3e1",
+        "status": "to_review",
+        "corrected_text": "While I may have met my master the following spring, it was my determination to power through the harsh winter that drew her attention.",
+        "last_updated": "2024-05-05T13:15:44.589853"
+    },
+    "Dating.Wizard.CarolineEx5": {
+        "original_hash": "acb3ba96667be2afd8de7adaa99a5f84041a5c5c455be1cd64298b7ddeaad931",
+        "status": "to_review",
+        "corrected_text": "I won't mince words, I once had feelings for Caroline, yet she only saw me as the mysterious woman living in the tower she could vent to.",
+        "last_updated": "2024-05-05T13:16:04.464853"
+    },
+    "Dating.Wizard.CarolineEx10": {
+        "original_hash": "bd102648951b7b4060f30e320e7e23a0fae8824dd68f6b75c68ff37be7c33553",
+        "status": "to_review",
+        "corrected_text": "Later, I learned that she had married that woman and birthed a child who suspiciously bore some of my features.",
+        "last_updated": "2024-05-05T13:16:18.140242"
+    },
+    "Engagement.Wizard.3.2": {
+        "original_hash": "fa26baae3c6aa6df82c6146312a883f16ee026bbfe2d55ed43baf598dadd21f0",
+        "status": "skipped",
+        "corrected_text": "Lewis looked as if her eyes were about to depart her head when I announced the news to her.",
+        "last_updated": "2024-05-05T13:16:26.020645"
+    },
+    "Married.WizardWalking.Question": {
+        "original_hash": "cc572779d812223c5be2d0faf880db1d6dbc4a087ff5481400eb616f114d524a",
+        "status": "accepted",
+        "corrected_text": "It's Rasmodia on her morning walk!",
+        "last_updated": "2024-05-05T13:16:36.057293"
+    },
+    "Married.WizardWalking.QuestionEvening": {
+        "original_hash": "db395ba37a85e84cd9f5232684cc4419178bc97339a26a2424923bd546da325e",
+        "status": "accepted",
+        "corrected_text": "It's Rasmodia on her evening walk home!",
+        "last_updated": "2024-05-05T13:16:39.546350"
+    },
+    "Married.WizardWalking.Answer": {
+        "original_hash": "c4a8a30098174b4398679efb177c536e5e4510ed7a4881cd1d3215c8b2b87a38",
+        "status": "accepted",
+        "corrected_text": "Call out to her.",
+        "last_updated": "2024-05-05T13:16:41.969988"
+    },
+    "Married.WizardWalking.FallBack.1": {
+        "original_hash": "35b01e514bac883b1969532547e8c2ea8cc6e07e575d0bfd4f2c8f6d099cd18e",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia seems like she's in a good mood.",
+        "last_updated": "2024-05-05T13:16:45.382197"
+    },
+    "Married.WizardWalking.FallBack.2": {
+        "original_hash": "1272940f1758c79eb089964b802a0117eaa57eb374f57515121f0ff1165be3fe",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia seems to be humming a little tune to herself. It's very quiet so I have to lean a little closer to her to hear it.",
+        "last_updated": "2024-05-05T13:16:48.942196"
+    },
+    "Married.WizardWalking.FallBack.3": {
+        "original_hash": "f760c0ca071503e9b0d0bed24053a8dab95edde2acadc08a2c865b232f61a5b9",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia's eyes twinkle as she shuffles a little closer each time our eyes meet during the walk.",
+        "last_updated": "2024-05-05T13:17:02.074886"
+    },
+    "Married.WizardWalking.FallBack.4": {
+        "original_hash": "7525afeae4cca0da2706354a7662aef38b0c28dc95b5f9ea9d651249e02f1afe",
+        "status": "accepted",
+        "corrected_text": "%It's subtle, but there's a little bounce in Rasmodia's every step.",
+        "last_updated": "2024-05-05T13:17:11.482802"
+    },
+    "Married.WizardWalking.FallBack.5": {
+        "original_hash": "1b91358bdb827bd7335aa50a12adaceb9c0231cc67176816f213ee88f383c183",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia still looks a little stiff, but she's clearly in a good mood and keeps drifting closer and closer to me as we walk.",
+        "last_updated": "2024-05-05T13:17:13.762080"
+    },
+    "Married.WizardWalking.Question.Qi": {
+        "original_hash": "4e0c5423722bd0bad7e4f3922ce7e28c6ea8c58cc2f3b54254bcb603ed5d3541",
+        "status": "accepted",
+        "corrected_text": "Despite taking the same route as usual, Rasmodia feels a lot harder to approach than before.",
+        "last_updated": "2024-05-05T13:17:16.815103"
+    },
+    "Married.WizardWalking.QuestionEvening.Qi": {
+        "original_hash": "7d25dda4f2e441cbd46f5a84479ef2a7a707e17b3b08237a7702f549e6724267",
+        "status": "accepted",
+        "corrected_text": "Rasmodia seems to be heading home after spending the day buried in research.",
+        "last_updated": "2024-05-05T13:17:23.669135"
+    },
+    "Married.WizardWalking.FallBack.Qi": {
+        "original_hash": "564e1d2512a51754b06a2795b8f14a78c1a964eb40eba5ef64b7174658107b40",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia seems very on edge...",
+        "last_updated": "2024-05-05T13:17:25.057401"
+    },
+    "Married.Wizard.Town.Early": {
+        "original_hash": "f30bce11800ca80f384b8b8391ae84173b71de2bca25d4baa81101da7f088968",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia looks somewhere between stiff and flustered when I get close, but she flashes me a small smile nonetheless.#$b#%Looks like she's still a little too shy to chat in public.#$b#%It'll probably get better over time.",
+        "last_updated": "2024-05-05T13:17:30.132270"
+    },
+    "Married.Wizard.TownMorning.Mid.1": {
+        "original_hash": "c1666d1cd65e46aa0db37f7562e10e0f69ff05c6cf6d7fd9cec213dacbe60354",
+        "status": "accepted",
+        "corrected_text": "Ah! @!${{e8}}#$b#*Ahem* It is good to see you so soon again, @.${{e0}}#$b#...'Look stiff'? I do not know what you're speaking of.${{e0}}#$b#%Rasmodia is glancing to the side before her shoulders finally start to relax.#$b#Forgive me. I felt the eyes of several onlookers on us a moment ago.${{e3}}#$b#I realize that I am simply being self-conscious as always and that our relationship is one to be celebrated, but it is... difficult.${{e3}}#$b#I swear I shall be better over time.${{e5}}",
+        "last_updated": "2024-05-05T13:17:37.966308"
+    },
+    "Married.Wizard.TownMorning.Mid.3": {
+        "original_hash": "f917574162aa98e369b971c742cc76ac1d28b95f42a983412094569352b2d23d",
+        "status": "accepted",
+        "corrected_text": "@. It is good to see you....${{e0}}#$b#......Er.${{e3}}#$b#%It seems like Rasmodia is struggling to come up with something to say...#$b#Hmm? 'Just be myself'?${{e7}}#$b#Ah...${{e2}}#$b#...That was indeed a rather long and awkward pause, wasn't it?${{e2}}#$b#...Are you certain 'being myself' is a good idea, my love?${{e2}}#$b#I would hate to negatively impact your reputation through my clumsy attempts at socializing.${{e2}} #$b#...I shall think on the suggestion.${{e3}}",
+        "last_updated": "2024-05-05T13:17:40.298310"
+    },
+    "Married.Wizard.TownMorning.Mid.4": {
+        "original_hash": "a3f2304ac3604eeb8cf1217e2771f3909a4114ae93e6faad50a2fe0fb6ac78f9",
+        "status": "accepted",
+        "corrected_text": "Ah, hello. I see that you have business in town today.${{e0}}#$b#...If you have the moment to spare, would you...${{e3}}#$b#...Would you consider taking a stroll to the tower with me?${{e8}}#$b#Only if you have time, of course.${{e3}}#$b#%Rasmodia is trying to play it off like a casual suggestion, but I can tell she's hoping I'll agree.",
+        "last_updated": "2024-05-05T13:17:45.171968"
+    },
+    "Married.Wizard.TownMorning.9": {
+        "original_hash": "90a9bcf9933e1f90a54f2ae62ae505181ec28d2e1736e873fbb4e74848b3f715",
+        "status": "accepted",
+        "corrected_text": "My heart! It is good to see you again so soon, beloved.${{e1}}#$b#I hope the day has gone well thus far.${{e9}}#$b#As for my walk to the tower? Ah, well. It is what it is.${{e1}}#$b# The stares of the townsfolk still unnerves me, but I can sense their good intentions.${{e3}}#$b#...Particularly when we are together.${{e4}}#$b#I do not know if I could ever be described as a 'good wife', but I do not wish to disappoint their expectations, let alone yours.${{e6}}",
+        "last_updated": "2024-05-05T13:17:53.341227"
+    },
+    "Married.Wizard.TownEvening.Mid.3": {
+        "original_hash": "ca8b01ed66af7d7157c7c353cf6f4e69e8dff6b4190308dbfc8a401c1dd92f72",
+        "status": "accepted",
+        "corrected_text": "Ah, pleasant evening, @.${{e0}}#$b#...'Stiff'? ...I do not know what you're speaking of.${{e3}}#$b#%Rasmodia glances to the side, trying to hint at the passing townsfolk with her eyes.#$b#*Ahem* I'm sure you have much left to do.${{e0}}#$b#I shall be waiting at home.${{e0}}#$b#...Please don't stay outside too late.${{e2}}",
+        "last_updated": "2024-05-05T13:18:01.858169"
+    },
+    "Married.Wizard.ForestMorning.8": {
+        "original_hash": "8a0bcb8fe991bdacb3afc4a6499fa10a43cc82fb6b366c4e85ecb42cb33ddce0",
+        "status": "accepted",
+        "corrected_text": "Ah, my heart!${{e9}}#$b#Have you come to the forest to see how your wife's little daily stroll is progressing?${{e6}}#$b#I am joking, of course, but I welcome the company nonetheless.${{e9}}#$b#It is always a pleasure to spend more time in your presence, be it sharing an activity or merely existing in silence.${{e1}}#$b#As for the remainder of my walk, however...${{e0}}#$b#Would you consider offering your time to complete this stroll with me, my heart?${{e4}}^Would you consider offering your time to complete this stroll with me, fine lady?${{e4}}#$b#I shall be sure to come up with a repayment of some sort when the day is done.${{e6}}",
+        "last_updated": "2024-05-05T13:18:08.292061"
+    },
+    "Married.Wizard.ForestEvening.2": {
+        "original_hash": "e56c1cdf04eeb476e16b44050114286138ce1ae0faaf5c10663e012797514633",
+        "status": "accepted",
+        "corrected_text": "Ah, @!${{e6}}#$b# It is a relief to see you, my heart.${{e9}}#$b#As shameful as it is for a witch of my age to admit, I've been sorely missing your presence since we last parted earlier today.${{e3}}#$b#I am fully aware of how clingy that sounds, but it is the truth.${{e3}}#$b#For all my years of solitude, only now do I realize how empty the world feels when devoid of human connection.${{e3}}#$b#I still enjoy the subtle whispers of nature, of course, but such moments are nothing compared to having you by my side to share in it.${{e4}}",
+        "last_updated": "2024-05-05T13:18:10.165125"
+    },
+    "Married.Wizard.ForestEvening.3": {
+        "original_hash": "bd96556df4bb11740286542acfacaf6d38db80d8ab93f1aba2844e0e90abd308",
+        "status": "accepted",
+        "corrected_text": "Ah, @. Is that you?${{e8}}#$b#For a moment I thought I had conjured your figure from my sheer longing to see you.${{e8}}#$b#It would not have been the first time traces of your presence have accidentally slipped into my magic from lingering thoughts, either.${{e1}}#$b#I know it is horribly unprofessional, but what is a witch in love to do?${{e4}}#$b#Offer my lovely partner a leisurely stroll home, I suppose.${{e6}}^Offer my lovely wife a leisurely stroll home, I suppose.${{e6}}",
+        "last_updated": "2024-05-05T13:18:12.316006"
+    },
+    "Married.Wizard.ForestEvening.6": {
+        "original_hash": "1aa0d2b469a6cb0cfb4bff5fd044c428a1f97139ce239c90bd6738037205a39c",
+        "status": "accepted",
+        "corrected_text": "Ah, @! You've once again graced my sights again, my love.${{e6}}#$b#We are still not too far from the tower. What are your thoughts on potentially taking the warp hex through your Nexus instead?${{e9}}#$b#...No, I'm not in a particular rush to get home, but would it not be better to spend the additional time lounging in each other's arms from the confines of our home?${{e1}}#$b#%...Somehow I get the feeling that Rasmodia isn't exactly telling the truth...#$b#Hmm? Avoid town? Of course not!${{e7}}'#$b#........ ${{e3}}#$b#%Rasmodia sighs.#$b#Yes, you are correct.${{e2}}#$b# I do not know what is so novel about a person walking through town that draws so many eyes!${{e5}}#$b#...I will learn to accept it eventually.${{e2}}",
+        "last_updated": "2024-05-05T13:18:17.174878"
+    },
+    "Married.Wizard.ForestEvening.9": {
+        "original_hash": "277f6b836657683a57c4c39657553c43316724059cefe819ae9eb24b810b52de",
+        "status": "accepted",
+        "corrected_text": "Hmm? Beloved?${{e7}}#$b#Ah, it truly is you.${{e6}}#$b# No matter how many times it happens, I am always pleasantly surprised when you appear before my eyes.${{e9}}#$b#...Do you think you have a few hours to spare for a stroll home with your terribly clingy and socially inept wife?${{e4}}#$b#Only if you have the moment to spare, of course.${{e1}}",
+        "last_updated": "2024-05-05T13:18:22.889420"
+    },
+    "Married.Wizard.TownEvening.TowerGift.1": {
+        "original_hash": "53c85972e7919b52bcc53f01c2664407ecf28a1dda618fd664c7710e3cde4b22",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia doesn't say anything, but she nudges over and matches my pace when our eyes meet.",
+        "last_updated": "2024-05-05T13:18:31.718805"
+    },
+    "Married.Wizard.TownEvening.TowerGift.3": {
+        "original_hash": "820be97108ef1d454c005475a8e3fd259c54b47d238b09ec34599119016dac98",
+        "status": "accepted",
+        "corrected_text": "%Rasmodia is trying her best to ignore the occasional knowing looks from the townsfolk as we walk past, but she shudders each time someone stares for a second too long.",
+        "last_updated": "2024-05-05T13:18:37.579855"
+    },
+    "Wizard.GreenRainFinished.Married": {
+        "original_hash": "25c2b534f80c1db1c1065a201b50c4586b5c9427c8855d55a7d9808a0c3a4c5b",
+        "status": "accepted",
+        "corrected_text": "Ah! I shall have much work over the next few days to make the most of such blessed rains.${{e6}}#$b#Come, beloved, allow me to show you the wanders of the force of nature we just laid witness to.${{e4}}#$b$%Rasmodia spent the next hour explaining to me the ins and outs of the strange rain....",
+        "last_updated": "2024-05-05T13:18:42.639380"
+    },
+    "Wizard.Marriage.Married": {
+        "original_hash": "a2b71cf8f0ce9848d66143b59cda5ebb6338a438bcdfa310c1e02a100346f408",
+        "status": "accepted",
+        "corrected_text": "Ah... Hello, beloved....${{e4}}#$b#To think that we have truly wed....${{e6}}#$b#I am still having a difficult time believing that such a thing could come to pass in reality, but I am determined to be a good wife to you nonetheless, my love.${{e4}}#$b#You will not regret choosing me. I promise.${{e6}}",
+        "last_updated": "2024-05-05T13:18:45.911381"
+    },
+    "Married.Wizard.Spring_Base_0": {
+        "original_hash": "f07a80b41b68c401e0023599965732bc132b204a76e8021984553f377c8c70af",
+        "status": "accepted",
+        "corrected_text": "I do not know what it is about this spring that puts me in a great mood, but I suspect it has something to do with the blossoming of another year with you, @.${{e6}}#$e#Ah, was that a little corny?${{e9}}#$b#Forgive this old woman for loving you too much, my heart.${{e4}}#$b#It is difficult to hold back when you stand before me, as perfect as you are.${{e6}}",
+        "last_updated": "2024-05-05T13:18:48.839016"
+    },
+    "Married.Wizard.Summer_Base_SeasonalBase_1": {
+        "original_hash": "d6ee4741a53106689b6bcdbb772c646c178ecbfb2e466e2b34922fb4bdcf00ac",
+        "status": "accepted",
+        "corrected_text": "%...I can feel my eyes being drawn to Rasmodia's waist and backside as she moves about the house...#$b#%...Those high-waisted pants are really doing a lot to highlight her... figure.#$b#Hmm? Are you in need of me, beloved?${{e7}}#$b#Ah. I see. Forgive me for misunderstanding. ${{e9}}#$b#It felt as if you were looking towards me. Please have a wonderful summer day, my love.${{e6}}",
+        "last_updated": "2024-05-05T13:19:08.000175"
+    },
+    "Married.Wizard.Summer_Base_SeasonalBase_2": {
+        "original_hash": "fbac8b9b24e70a34d4beae8da62252e1930bf27dbf5cfe4eccc1730b10da4213",
+        "status": "accepted",
+        "corrected_text": "%...I never really paid much attention before I suggested those pants, but Rasmodia has a really nice backside...#$b#%I almost want to pat it a little....#$b#Hmm? Is something the matter, my heart?${{e9}}#$b#Ah, something on the back of my pants?${{e0}}#$b#You'll get it for me? ${{e7}}#$b#!! ${{e8}}#$b#Beloved! Where are you touching!? At this time of day!${{e8}}#$e#Sometimes I feel as if you will be the end of me, my heart.${{e6}}#$e#...Perhaps some revenge is in tow, hmm?${{e4}}",
+        "last_updated": "2024-05-05T13:19:10.758978"
+    },
+    "Married.Wizard.Summer_Base_SeasonalBase_4": {
+        "original_hash": "d4143811f61f3c1962635277402efdd6f3dbf9eb4efe4e111d8b6ec1c2d54269",
+        "status": "accepted",
+        "corrected_text": "If I am to be honest, I had not really considered clothing of a more modern design when you suggested potential garments for me.${{e0}}#$b#Of course, you could call my original attire somewhat modern, but that assemble was designed by the tailor once I detailed my needs to her.${{e3}}#$b#The cloak certainly speaks more 'Witch', but I would not be against trying more mundane styles from this era if the opportunity presents itself.${{e1}}#$b#...No promises that it will suit me, however.${{e3}}",
+        "last_updated": "2024-05-05T13:19:13.573752"
+    },
+    "Married.Wizard.Summer_Base_SeasonalAlt_1": {
+        "original_hash": "11c34d0d894198d890ba30c5684a78146c12c44784e9db3ee39a0bdb8085e9ca",
+        "status": "accepted",
+        "corrected_text": "%...I can feel my eyes being drawn to Rasmodia's chest....#$b#%It really is a super low-cut top.....#$b#%'...@...'#$b#...Ah, finally meeting my eyes, I see..${{e6}}#$b#Where exactly were you looking, hmm?${{e4}}#$b#While I cannot say that I don't enjoy the attention, please be mindful of where you are walking.${{e1}}#$b#I would not want my lovely partner crashing into a wall because your eyes are too... distracted.${{e4}}^I would not want my lovely wife crashing into a wall because she's too... distracted.${{e4}}",
+        "last_updated": "2024-05-05T13:19:18.541671"
+    },
+    "Married.Wizard.Summer_Base_SeasonalAlt_2": {
+        "original_hash": "1c7d1914689320373cd66095a0cca5bffb3e12a2a95e473815ef0f3971b1c73f",
+        "status": "accepted",
+        "corrected_text": "%...Staring at Rasmodia's exposed chest is giving me a lot of ideas....#$b#Ah! @! Be careful!${{e7}}#$b#%I almost tripped but Rasmodia caught me in time....#$b#Are you alright, my love?${{e2}}#$b#While your attention is... very welcome...${{e6}}#$b#I cannot condone it if you may potentially hurt yourself.${{e2}}#$b#...Perhaps, it is better if I change--${{e3}}#$b#W-Where is your hand going, beloved!?${{e8}}#$b#%...I can feel Rasmodia shuddering under my touch...#$b#Ngh...${{e4}}#$b#@! Are you trying to seduce your wife to bed right now? At this time of day?${{e8}}#$b#Ah, I see. This was your plan all along, no?${{e4}}#$b#...Truly, what a sinful creature you are.${{e6}}^...Truly, what a sinful woman you are.${{e6}}",
+        "last_updated": "2024-05-05T13:19:27.116173"
+    },
+    "Married.Wizard.Fall_Base_0": {
+        "original_hash": "387417c62b56f7ff790baa1d05feb88aec4e2a4ff20b7d25e6597f9ad73c3afa",
+        "status": "accepted",
+        "corrected_text": "As autumn descends, so too must we begin to bid farewell to another year.$${{e9}}#$b#And what a year it has been, my heart!${{e6}}#$e#I had thought it impossible considering my condition during winter...${{e3}}#$b#...But I am actually looking forward to settling down, wrapped in your warm embrace for the chillier seasons.${{e6}}#$e#Ah... you would like to get started already...?${{e8}}#$b#*Chuckles* Come here my love.${{e6}}#$b#%Rasmodia wrapped her arms around me and gave me a warm hug.",
+        "last_updated": "2024-05-05T13:19:30.938888"
+    },
+    "Married.Wizard.Fall_Base_6": {
+        "original_hash": "b848e6d7dd981390b40f490c757abc2605b997cc5414e6ea316e5ed2e54c9d1d",
+        "status": "accepted",
+        "corrected_text": "....'Which season am I stronger in'?${{e7}}#$b#Rather than a vague notion of 'strength', different aspects of my powers swell with different seasons due to the shifting of the planes. ${{e0}}#$b#Expect winter. ${{e10}}#$e# During the fall, my offensive magic tends to spark more aggressively than usual, likely a remnant of my combat witch days, but it is nothing like what my ex-wife experienced.${{e3}}#$b#It's not very conducive to my work thus I end up more drained than anything converting those energies to something useful. ${{e3}}",
+        "last_updated": "2024-05-05T13:19:32.222316"
+    },
+    "Married.Wizard.Winter_Base_3": {
+        "original_hash": "f0192ff78d0857e130466b41552489b0782363043354285eda4f8eebcbf1f4c2",
+        "status": "accepted",
+        "corrected_text": "During winter, I typically reserve mana to reinforce the town wards and then get to reading.${{e0}}#$e#I've barely made it through a quarter of the books in my tower... ${{e3}}#$b#...Yet I cannot seem to resist purchasing more....${{e5}}#$e#I suppose it is simply in a witch's nature to expand one's collection.${{e6}}",
+        "last_updated": "2024-05-05T13:19:34.882197"
+    },
+    "Married.Wizard.Rainy_Day_2_0": {
+        "original_hash": "cee2b8e28a767c80a42d8d5ebca6fe92281d73a65f94c9f42f096abe4252162f",
+        "status": "accepted",
+        "corrected_text": "Ah! The rains have blessed us once again!${{e6}}#$b#I have always enjoyed a good downpour but since our union, such weather has gained a new meaning.${{e9}}#$b#After all, you are now free from watering the crops, no?${{e4}}#$b#Might I convince you to spend some extra time with your wife this fine morning?${{e6}}",
+        "last_updated": "2024-05-05T13:19:36.421417"
+    },
+    "Married.Wizard.Rainy_Day_3_Null_3": {
+        "original_hash": "21df8bd201ac55ac990d26fc0faf597d79f50aea0963bd7b212c4bd5c2ee452f",
+        "status": "accepted",
+        "corrected_text": "The only criticism I have of robes is that they're irritatingly heavy when wet...${{e5}}#$b#I make do with the water-repelling spell when I have excess mana, but that is unlikely during my experiments.${{e3}}#$e#Hmm? A 'raincoat'.${{e7}}#$b#I would not be above wearing such an article for you, my love, but I have a reputation to keep in public.${{e0}}#$e#...'What reputation'?${{e3}}#$b#Have you ever seen a Witch in a raincoat?${{e5}}#$b#...I did not think so....${{e3}}",
+        "last_updated": "2024-05-05T13:19:39.500675"
+    },
+    "Married.Wizard.Rainy_Day_4_0": {
+        "original_hash": "33f34a15567a8a5a0e982999849b17081908d80eb6dd608efbd0d1aa8b009554",
+        "status": "accepted",
+        "corrected_text": "The rains outside are quite heavy today.${{e3}}#$b#I am thinking of doing some minor repairs on the house as I spotted a few instances of moisture seeping through while dusting.${{e0}}#$b#Hmm? Of course I can patch leaks, beloved.${{e9}}#$b#I am a Witch! ${{e6}}#$e#I suspect I would have a much easier time than the town carpenter patching the roof under such conditions, at the least.${{e9}}",
+        "last_updated": "2024-05-05T13:19:43.667574"
+    },
+    "Married.Wizard.Rainy_Day_4_BadCook_3": {
+        "original_hash": "38250b17884d0bf3e06f0151ec22348599a1a1e9f5cc972e7b957306c63b2574",
+        "status": "accepted",
+        "corrected_text": "Were I a domestic wife, I would offer to make you a hot dinner after the day you will inevitably spend in this storm.${{e0}}#$b#But I'm not. You knew that before you married me, so I won't apologize.${{e10}}#$e#Unless you want burnt soup. ${{e3}}#$b#Don't ask how - I would find a way to do it.${{e2}}",
+        "last_updated": "2024-05-05T13:19:46.324147"
+    },
+    "Married.Wizard.Rainy_Night_2_0": {
+        "original_hash": "5d34ef2ef325d1f9a0ab970bfcea5341cc9edb661f876faf47cefae201bc6ce4",
+        "status": "accepted",
+        "corrected_text": "My heart, welcome home.${{e9}}#$b#Come, shed your sodden clothes and sink into my arms for a well-deserved rest.${{e6}}#$e#I have even managed to create a hot meal for your benefit. Shall I serve it to you now?[199 218 219 236]${{e6}}#$e#....Alright, I purchased it from the saloon.${{e2}}#$b#...Can we just pretend that I am the perfect domestic wife?${{e4}}",
+        "last_updated": "2024-05-05T13:19:49.448544"
+    },
+    "Married.Wizard.Indoor_Day_0_3": {
+        "original_hash": "cc7a39db27ad5ec7dfad6c4dce3bab5c620e5cb3e62536b99189d738ef1504d9",
+        "status": "accepted",
+        "corrected_text": "I think I'll do a little cleaning today. ...You won't blame me too much if I use some magic to help it along, right?${{e1}}#$e#Hmm? Of course there are cleaning spells.${{e0}}#$b#You do not think that I have been manually scrubbing my own laundry for a thousand years, do you?${{e1}}#$b#Such magic wasn't originally intended for cleaning, of course, but what is a Witch if not a profession of marrying creativity and knowledge?${{e9}}",
+        "last_updated": "2024-05-05T13:19:51.415452"
+    },
+    "Married.Wizard.Indoor_Day_1_0": {
+        "original_hash": "7397de3d7ff8e3d189ed23b26047ecba3305d18585efd808532c9e044d979bd0",
+        "status": "accepted",
+        "corrected_text": "Ah, good morning, my heart. How are you this morning?${{e9}}#$b#I know that you are busy so I shall not hold you for too long, but may I request a small favour of affection this morn?${{e6}}#$b#It would make a certain very old witch very happy.${{e4}}#$e#%I gave Rasmodia a long kiss on the lips.#$b#Mmm...${{e6}}#$b#Thank you for indulging your clingy wife, my heart.${{e6}}",
+        "last_updated": "2024-05-05T13:19:55.292936"
+    }
+}
