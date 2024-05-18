@@ -9564,6 +9564,7 @@
 "Junimoscroll.Intro.02": "I sensed a shift in the western forest last night.${{e3}}#$b#I suspect it's related to Junimo activity as of late, but I would need to survey the area myself to be certain.${{e3}}#$e#You felt it too?#$b#Very curious, indeed.${{e1}}",
 "JunimoTile3.Wizard.0": "@? Intense magic is surrounding you.",
 "JunimoTile3.Wizard.1": "Hold still while I untangle this. Did you encounter something strange?",
+"JunimoTile3.Wizard.1.5": "What have I told you of your tendency for recklessness?",
 "JunimoTile3.Wizard.2": "Hmm? Junimo activity in the abandoned vineyard?",
 "JunimoTile3.Wizard.3": "And what of the object you're carrying?",
 "JunimoTile3.Message.4": "You feel something in my pocket...",
