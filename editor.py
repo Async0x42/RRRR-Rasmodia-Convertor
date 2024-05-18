@@ -167,7 +167,7 @@ def setup_console(diffs, corrections):
         while True:
             key, o_text, p_text, corrected, hash_match = diffs[index]
             progress.update_progress(index + 1, key, o_text, p_text, corrected, hash_match, corrections)
-            console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold] or [bold]'n <number>'[/bold] to jump[/blue]")
+            console.print("[blue]Navigate with [bold]'.'[/bold], [bold]','[/bold], [bold]'ff'[/bold] to fast forward past confirmed or skipped, or [bold]'n <number>'[/bold] to jump[/blue]")
             console.print("[blue][bold]'d'[/bold] to delete, [bold]'e'[/bold] to edit, [bold]'s'[/bold] to save all, [bold]'k'[/bold] to toggle skipping, [bold]'f'[/bold] to flag for review, [bold]'enter'[/bold] to accept and move next, or [bold]'q'[/bold] to save and quit[/blue]")
             choice = console.input("Command: ").strip().lower()
 
