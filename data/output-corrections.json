@@ -1042,5 +1042,95 @@
         "status": "accepted",
         "corrected_text": "My many centuries have turned the tower into a very convenient hub for my activities.${{e3}}#$b#Yet I have never been as irritated with its existence as I am the days I must return to its halls.${{e5}}#$b#Perhaps I should simply merge it with the farmhouse and be done with it.${{e11}}#$e#%Rasmodia heaves a heavy sigh.#$b#Merely words spoken in frustration, my heart.${{e3}}#$b#You and I both know I shall never speak to another villager again if I did not have the excuse of walking through town or reserving the side room at the saloon.${{e3}}",
         "last_updated": "2024-05-05T18:05:35.955554"
+    },
+    "Married.Wizard.Funleave_80": {
+        "original_hash": "990ac76290b3b33182f3bd16fe64f71745cbcce36bdb91ea095d8af43a4cb68e",
+        "status": "to_review",
+        "corrected_text": "I was once concerned for what this change in lifestyle will entail.${{e0}}#$b#After all, I thought I'd already found the best approximation of stability one such as myself could approach...${{e3}}#$b#Yet, I've found myself adapting to life with you on the farm far quite well.${{e6}}#$b#As well as a woman could while missing her partner over the first half of the week, at least.${{e2}}^As well as a woman could while missing her husband over the first half of the week, at least.${{e2}}#$e#...I shall see you in the evening, my heart.${{e2}}",
+        "last_updated": "2024-05-18T11:38:57.356502"
+    },
+    "Married.Wizard.Funleave_83": {
+        "original_hash": "22d35f2224092e0cc9504d4eec03793f1a5088cc547517903ac35dfea369b159",
+        "status": "accepted",
+        "corrected_text": "To become a planes witch is to devote oneself to a lifetime of service.${{e3}}#$b#Even should one feel no responsibility towards the material plane, to do one's task in balancing the energies is to ensure one's safety.${{e3}}#$b#After all, we hold great personal power even amongst the vast majority of practitioners.${{e3}}#$b#In such cases, it is better to telegraph one's allegiances to forces of largely good than to draw undue attention from 'what ifs'.${{e3}}#$b#...That is to say, I do not mind continuing to be at the Ministry's beck and call as long as it means I may continue protecting our peaceful lives, my heart.${{e6}}#$b#...Even if those duties remove me from that life for hours on end every other day.${{e5}}",
+        "last_updated": "2024-05-18T11:42:30.694118"
+    },
+    "Married.Wizard.Funleave_87": {
+        "original_hash": "68c60b7dd93830b98084ee995f52bcc1f865b9e54e5c1fc8930ad3b010da2396",
+        "status": "accepted",
+        "corrected_text": "Yet another morning where I am forced to depart for the tower's cold stone halls.${{e3}}#$b#I would be lying if I did not admit how difficult it is to leave through those doors knowing that I shall be forced to part with you for hours on end, but is a sacrifice that must be made.${{e2}}#$e#Overly dramatic or not, it is how I feel, my heart...${{e2}}#$b#...A kiss would certainly help, however.${{e4}}#$b#%I kissed Rasmodia's expectant lips.#$b#*Chuckles* Thank you for indulging your clingy wife as always, my love.${{e6}}",
+        "last_updated": "2024-05-18T11:42:53.543825"
+    },
+    "Married.Wizard.Funleave_96": {
+        "original_hash": "7c182ef22c982f40eea3d497fa9a778705f001db2d9a20195f215ea7c731c14e",
+        "status": "to_review",
+        "corrected_text": "In an effort to force myself out of the house, I have left the majority of my magical equipment and documents at the tower.${{e3}}#$b#...Well, it is working a little too well because I now feel like shaking myself and asking why she does not wish to spend more time with her partner!?${{e11}}^...Well, it is working a little too well because I now feel like shaking myself and asking why he does not wish to spend more time with his wife!?${{e11}}#$b#%Rasmodia heaves a heavy sigh.#$b#....I shall see you in the evening, my heart.${{e2}}",
+        "last_updated": "2024-05-18T11:44:07.372082"
+    },
+    "Married.Wizard.Funleave_97": {
+        "original_hash": "4cde18a6f5e765228ea9c5ba91825871860fc195945e274ba0cb7beed0de0a75",
+        "status": "accepted",
+        "corrected_text": "It is usually leaving the house that is the most difficult.${{e3}}#$b#By the time I've set foot in the tower, I have usually come to terms with the hours we are to spend apart on a given day.${{e2}}#$b#It does not make it any easier, however.${{e3}}#$b#%I give Rasmodia a comforting hug, before finishing things off with a few soft kisses on her cheek.#$b#Ah...${{e8}}#$b#Thank you, beloved.${{e4}}#$b#I shall not disappoint you.${{e6}}",
+        "last_updated": "2024-05-18T11:47:16.517693"
+    },
+    "Married.Wizard.Funleave_98": {
+        "original_hash": "135e8ad483010de07c44a5585be1aa4e7bdc5d04cb240c7df5d4393b975a5533",
+        "status": "accepted",
+        "corrected_text": "As much as I long to hold you all day, my heart, I do not wish to make you feel as if you are an accessory for my emotional stability.${{e3}}#$b#There is no need to put your plans on hold simply because your needy wife wishes to always be in your presence.${{e6}}#$b#Ah... if you wish to accompany me, however....${{e8}}#$b#....May I interest you in a walk through the forest, my love?${{e4}}",
+        "last_updated": "2024-05-18T11:47:23.641958"
+    },
+    "Married.Wizard.Funleave_99": {
+        "original_hash": "0350122024c246b6387079abbc4bbe6e9968746e2680d636ec2eb7ad3192dc0e",
+        "status": "accepted",
+        "corrected_text": "...I realized I was quite a needy person when it came to love, but I did not realize to what degree.${{e8}}#$b#It is certainly because you spoil me far too much, my heart.${{e6}}#$b#Now I cannot even pass a few hours of work without my thoughts drifting to you.${{e4}}#$e#...Which is why it is now so difficult to even return to the tower....${{e3}}#$e#Do not worry for me, my heart. I am a Witch who has walked this plane for over a thousand years. I shall survive.${{e5}}#$b#.....Probably.${{e3}}",
+        "last_updated": "2024-05-18T11:47:28.622253"
+    },
+    "Married.Wizard.Funleave_101": {
+        "original_hash": "3ca66816cdd823957d748d28764aac7fd957d96a126669bf5a6e7f4a013eb536",
+        "status": "to_review",
+        "corrected_text": "You make me whole, @.${{e9}}#$b#It is only by your side do I feel something approaching to a complete person.${{e6}}#$b#Perhaps that is why I am only able to fully let go of my reservations in your presence. ${{e3}}#$e#...Yes, I was once again referred to as stoic.${{e3}}#$b#I do not mind as it is the persona I have built for myself over many years, but I cannot help but feel that it no longer encompasses my character as it once did...${{e3}}#$b#...Not while you are in my life, my heart.${{e6}}#$e#...Still, a meeting is a meeting.${{e3}}#$b#I suppose I shall put on the stoic mask Rasmodia Rasmodia once more.${{e3}}#$b#See you in the evening, my heart.${{e6}}",
+        "last_updated": "2024-05-18T13:13:11.583871"
+    },
+    "Married.Wizard.Funleave_102": {
+        "original_hash": "a536b79f8e5854d25a0f365a53f54b74fc2f4a7a153a9b5cdbdcdbda384a0bc9",
+        "status": "accepted",
+        "corrected_text": "I do not want to make it seem like it is a big deal whenever I depart in the morning since you do so every day...${{e3}}#$b#Yet it is for me! To spend nearly an entire day away from my beloved @!${{e5}}#$b#What a travesty.${{e2}}#$e#Alright, alright, I shall 'put on my big girl pants' and act like an adult.${{e1}}#$e#*Ahem*.${{e0}}#$b#Would you please consider visiting me at the tower if you have time, beloved?${{e6}}#$e#Pretty please?${{e6}}#$b#Pretty, pretty, please?${{e6}}#$b#...With a cherry on top...?${{e6}}#$e#*Chuckles*...No?${{e9}}#$b# I could have sworn that would have worked!${{e6}}",
+        "last_updated": "2024-05-18T13:13:24.232254"
+    },
+    "Married.Wizard.Funleave_106": {
+        "original_hash": "0b59545cfd24dc2c078715554d65f086080df1126a8167ee5253a70127d4e2d0",
+        "status": "accepted",
+        "corrected_text": "...Have I ever mentioned that you are very beautiful when you've just woken up, slightly disheveled as you are?${{e8}}#$b#There is simply a 'cozy' aspect that cannot be quantified.${{e6}}#$b#It certainly makes it very difficult for a woman to steel herself to leave the house...${{e2}}#$e#...Yet go I must. I shall see you later, my love....${{e2}}",
+        "last_updated": "2024-05-18T13:13:29.001119"
+    },
+    "Married.Wizard.Funleave_109": {
+        "original_hash": "231b62a86980a342574e21524e7ae7cde9697ba89fd9c935055e8c8e024e63d0",
+        "status": "accepted",
+        "corrected_text": "Ah, you've awoken, my heart.${{e6}}#$b#As much as I wish to tell you that there is no reason you should not sleep in a little in the morning...${{e0}}#$b# ...I cannot deny the pleasure of seeing you before I am to depart for the tower...${{e6}}#$b#I love you, @. Have a wonderful day, my beloved star.${{e4}}#$b#%Rasmodia gave me a gentle kiss....#$e#Let us reunite in the evening, my love.${{e6}}",
+        "last_updated": "2024-05-18T13:13:33.514018"
+    },
+    "Married.Wizard.Funleave_113": {
+        "original_hash": "2324949940f8267a323f3440ee6d0bdefe1d9801ef18daa8e29303f57db1e7d9",
+        "status": "accepted",
+        "corrected_text": "I realize that you get plenty of exercise over the course of a day, my heart, but have you considered a morning walk through town.... and maybe the forest?${{e1}}#$b#....Specifically on Mondays, Tuesdays, Wednesdays, and Thursdays?${{e6}}#$b#...And maybe the odd day here and there when a certain Witch is due to visit the tower for special circumstances....?${{e6}}#$e#...Simply a suggestion.${{e4}}",
+        "last_updated": "2024-05-18T13:13:40.584516"
+    },
+    "Married.Wizard.Funleave_114": {
+        "original_hash": "25e89785780dbb61009ca23a66cd4d0d9d91e563dac2da2c09360f392a9537b7",
+        "status": "accepted",
+        "corrected_text": "If there is one thing I enjoy of my days at the tower, it is the anticipation of the walk home.${{e3}}#$b#The feeling of cresting the corner to see the farmhouse in sight....${{e8}}#$b#It is only second to actually running into your embrace every night...${{e4}}#$e#...Yes, I realize that I am fantasizing of returning home when I have not even started my day yet.${{e3}}#$b#...Can a woman not dream a little to get through the day?${{e6}}#$e#I shall look forward to seeing you in the evening, my love.${{e4}} ",
+        "last_updated": "2024-05-18T13:13:44.455292"
+    },
+    "Married.Wizard.Funleave_116": {
+        "original_hash": "afa99a81226269ab39fcd248890e8798960e23b04e277760ca5c295e63168650",
+        "status": "accepted",
+        "corrected_text": "And yet again I forced from your side, my heart.${{e5}}#$b#Part of me wishes for such days to ...I realize I have a tendency for dramatics when it comes to you.${{e3}}#$b#I hope that it has not worn your patience thin compared to the stoic woman that stood before you when you would visit the tower daily to see me...${{e2}}#$q 10001/10002 null#?!...#$r 10001 0 Daily_ClingClingy# I like you better like this. #$r 10002 0 Daily_ClingStoic#It's fine. I really don't mind.",
+        "last_updated": "2024-05-18T13:13:54.362061"
+    },
+    "Married.Wizard.Funleave_Daily_ClingClingy": {
+        "original_hash": "132d7ba94369fefd839686e558396e064ec1dd1a9a9d2a218496c1c2b84fd669",
+        "status": "accepted",
+        "corrected_text": "Ah....${{e8}}#$b#Truly? ${{e6}}#$b#Then I am relieved because you will likely continue to receive this 'Rasmodia'.${{e6}}#$e#I shall see you when I return to you once more, my love.${{e4}}",
+        "last_updated": "2024-05-18T13:14:01.630089"
     }
 }
