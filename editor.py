@@ -196,6 +196,7 @@ def setup_console(diffs, corrections):
                         'status': 'to_review',
                         'last_updated': datetime.datetime.now().isoformat()
                     }
+                    diffs[index] = (key, o_text, p_text, False, True)
                 console.print(f"[bold yellow]Flagged '{key}' for review.[/bold yellow]")
             elif choice == 'ff':  # Fast-forward command
                 next_index = find_next_actionable_index(diffs, corrections, index)
