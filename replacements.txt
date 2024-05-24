@@ -12,5 +12,6 @@ husband|wife
 dad|mom
 mr|mrs
 wizard|witch
+magnus rasmodius|rasmodia
 rasmodius|rasmodia
 magnus|rasmodia
