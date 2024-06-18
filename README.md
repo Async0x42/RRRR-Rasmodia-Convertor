@@ -58,8 +58,14 @@ Running the Script
 Once you have set up everything, you can run the script using:
 
 ```bash
+python app.py
+```
+This will convert strings matching replacements.txt from the RRRR default.json and output it to output.json
+
+```bash
 python editor.py
 ```
+This will launch the editor using both default.json and output.json, saving any user edits to output-corrections.json. When the user saves all changes, a patch.json is made with only the changed strings. output-corrections.json contains the status of corrections and hash info to detect if any source lines (default.json) changed since the last time there was a correction.
 
 Navigating the Script
 - Use . and , to navigate forward and backward through differences.
