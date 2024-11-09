@@ -126,11 +126,11 @@ def highlight_differences(original, patched):
     return highlighted_text
 
 def edit_text(text):
-    """Prepopulate and allow editing of text with cursor control."""
+    """Prepopulate and allow editing of text with cursor control and mouse support."""
     session = PromptSession()
     def pre_run():
         session.app.current_buffer.cursor_position = text.find('[') if '[' in text else 0
-    return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run)
+    return session.prompt("[bold blue]Edit text:[/bold blue] ", default=text, pre_run=pre_run, mouse_support=True)
 
 def find_first_unconfirmed(diffs, corrections):
     """Find the index of the first unconfirmed or flagged for review difference."""
